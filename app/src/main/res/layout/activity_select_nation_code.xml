@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/wuliu_default"
+    >
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout" >
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img"
+            />
+        <TextView
+            android:id="@+id/tv_title"
+            android:text="@string/select_nation"
+            style="@style/Title_Text_Style" />
+    </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/country_lvcountry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            />
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_marginBottom="@dimen/x1">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/us_hbuy" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/page_bg"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x60"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x30"
+                android:src="@drawable/hbuy_logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x30"
+                android:padding="@dimen/x10"
+                android:text="@string/us_hbuy_details"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="email|phone|web"
+                android:padding="@dimen/x10"
+                android:textColorLink="#000000"
+                android:text="@string/us_hbuy_web"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x10"
+                android:text="@string/us_hbuy_weixin"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x4"
+                android:paddingLeft="@dimen/x10"
+                android:text="@string/us_hbuy_weibo"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorLink="#000000"
+                android:autoLink="email|phone|web"
+                android:padding="@dimen/x10"
+                android:text="@string/us_hbuy_phone"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x4"
+                android:gravity="center"
+                android:padding="@dimen/x20"
+                android:text="@string/us_hbuy_below"
+                android:textSize="@dimen/x10" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

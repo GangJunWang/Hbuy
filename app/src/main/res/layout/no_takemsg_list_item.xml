@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/x10"
+    android:id="@+id/layout"
+    android:padding="@dimen/x6"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+    <TextView
+        android:singleLine="true"
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom" />
+    <ImageView
+        android:layout_marginBottom="@dimen/x10"
+        android:layout_marginTop="@dimen/x10"
+        android:id="@+id/iv_hint"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x150" />
+    <TextView
+        android:maxLines="3"
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <View
+        android:layout_marginTop="@dimen/x6"
+        android:layout_marginBottom="@dimen/x6"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/page_bg"/>
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="立即查看" />
+</LinearLayout>

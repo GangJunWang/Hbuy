@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_weight="1"
+        android:layout_marginBottom="@dimen/y1">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/create_order_list" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/lv_order_pay"
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_tab"></ListView>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/x1"
+        android:weightSum="3">
+
+        <CheckBox
+            android:id="@+id/cb_all_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/all_select" />
+        <TextView
+            android:id="@+id/tv_all_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="合计: 55 RMB" />
+
+        <Button
+            android:id="@+id/bt_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transfer_next"
+            android:text="@string/pay" />
+    </LinearLayout>
+</LinearLayout>

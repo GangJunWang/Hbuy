@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/x10"
+    android:paddingLeft="@dimen/x10"
+    android:paddingRight="@dimen/x10"
+    android:descendantFocusability="beforeDescendants" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/buylist_item_bg"
+    android:orientation="horizontal"
+    android:padding="@dimen/x6">
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_width="@dimen/x60"
+        android:layout_height="@dimen/x60"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/me_default" />
+    <RelativeLayout
+        android:layout_toRightOf="@+id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_status"
+        android:layout_marginRight="@dimen/x10"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_title"
+            android:maxLines="2"
+            android:textSize="@dimen/x16"
+            android:ellipsize="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/x10" />
+        <TextView
+            android:textColor="@color/wuliu_default"
+            android:layout_below="@+id/tv_title"
+            android:id="@+id/tv_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+   <!-- <TextView
+        android:id="@+id/tv_status"
+        android:textColor="@color/wuliu_default"
+        android:layout_alignParentRight="true"
+        android:text="等待提交"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />-->
+</RelativeLayout>
+</FrameLayout>

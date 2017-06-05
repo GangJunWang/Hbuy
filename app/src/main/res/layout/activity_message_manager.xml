@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:background="@color/default_color"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x10" >
+        <ImageView
+            android:src="@drawable/back"
+            android:id="@+id/iv_back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:layout_centerInParent="true"
+            android:id="@+id/rg_group"
+            android:background="@drawable/bg_left_and_right_angle_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <RadioButton
+                android:button="@null"
+                android:id="@+id/rb_take_mgs"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/x12"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x4"
+                android:textColor="@drawable/message_text_color"
+                android:background="@drawable/bg_take_inform_msg"
+                android:text="最新资讯" />
+            <RadioButton
+                android:button="@null"
+                android:id="@+id/rb_inform_mgs"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/x4"
+                android:textSize="@dimen/x12"
+                android:textColor="@drawable/message_text_color"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_take_inform_msg_two"
+                android:text="系统消息" />
+        </RadioGroup>
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

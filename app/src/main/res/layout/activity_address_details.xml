@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_marginBottom="@dimen/y1">
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="地址详情" />
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/y2"
+            android:text="编辑"
+            android:textColor="@color/color_white" />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/color_white"
+        android:orientation="vertical"
+        android:padding="@dimen/x10"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <TextView
+            android:paddingBottom="@dimen/x10"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/tv_name"
+            android:text="收货人" />
+        <View
+            android:layout_marginBottom="@dimen/x4"
+            android:background="@color/page_bg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:paddingBottom="@dimen/x10"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/tv_phone"
+            android:text="联系电话" />
+        <View
+            android:layout_marginBottom="@dimen/x4"
+            android:background="@color/page_bg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:paddingBottom="@dimen/x10"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/tv_nation"
+            android:text="现居国家" />
+        <View
+            android:layout_marginBottom="@dimen/x4"
+            android:background="@color/page_bg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:paddingBottom="@dimen/x10"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/tv_zip"
+            android:text="邮编" />
+        <View
+            android:layout_marginBottom="@dimen/x4"
+            android:background="@color/page_bg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="详细地址 :" />
+        <TextView
+            android:paddingBottom="@dimen/x10"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/tv_details" />
+        <View
+            android:background="@color/page_bg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+   </LinearLayout>
+</LinearLayout>

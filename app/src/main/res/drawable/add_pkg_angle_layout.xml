@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android" >
+        <solid android:color="@color/add_pkg_angle_layout_fill_color" />
+        <corners  android:topLeftRadius="@dimen/x12" android:topRightRadius="@dimen/x12" />
+    </shape>
+</item>
+<item  android:top="@dimen/x10">
+    <shape xmlns:android="http://schemas.android.com/apk/res/android" >
+        <gradient android:startColor="@color/add_pkg_angle_layout_fill_color" android:endColor="@color/add_pkg_angle_layout_fill_color"
+            android:angle="270" />
+        <padding android:left="@dimen/x2" android:top="@dimen/x2" android:right="@dimen/x2"
+            android:bottom="@dimen/x2" />
+        <corners  android:topLeftRadius="@dimen/x12" android:topRightRadius="@dimen/x12" />
+    </shape>
+</item>
+</layer-list>
+    <!--<?xml version="1.0" encoding="UTF-8"?>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <solid android:color="@color/add_pkg_angle_layout_fill_color" />
+        <corners android:topLeftRadius="@dimen/x12" android:topRightRadius="@dimen/x12"/>
+        <stroke
+            android:width="@dimen/x1"
+            android:color="@color/add_pkg_angle_layout_fill_color" />
+    </shape>-->

@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout">
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/modity_login_pwd" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/x10">
+        <RelativeLayout
+            style="@style/Address_Edit_Layout">
+            <ImageView
+                android:src="@drawable/pwd_hint"
+                android:id="@+id/iv_name"
+                style="@style/Address_Edit_Image_View" />
+            <View
+                android:id="@+id/view_name"
+                android:layout_toRightOf="@+id/iv_name"
+                style="@style/Address_Edit_Layout_View" />
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:id="@+id/et_old_pwd"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:password="true"
+                android:textSize="@dimen/x12"
+                android:textCursorDrawable="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view_name"
+                android:hint="@string/old_pwd" />
+        </RelativeLayout>
+        <TextView
+            android:layout_marginBottom="@dimen/x10"
+            style="@style/Address_Edit_Layout_TextView"
+            android:layout_width="match_parent"
+            android:text="@string/setting_new_pwd" />
+        <RelativeLayout
+            style="@style/Address_Edit_Layout">
+            <ImageView
+                android:src="@drawable/pwd_hint"
+                android:id="@+id/iv_name1"
+                style="@style/Address_Edit_Image_View" />
+            <View
+                android:id="@+id/view_name1"
+                android:layout_toRightOf="@+id/iv_name1"
+                style="@style/Address_Edit_Layout_View" />
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:id="@+id/et_new_pwd"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:password="true"
+                android:textSize="@dimen/x12"
+                android:textCursorDrawable="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view_name1"
+                android:hint="@string/bound_hint_pwd" />
+        </RelativeLayout>
+        <RelativeLayout
+            style="@style/Address_Edit_Layout">
+            <ImageView
+                android:src="@drawable/pwd_hint"
+                android:id="@+id/iv_name2"
+                style="@style/Address_Edit_Image_View" />
+            <View
+                android:id="@+id/view_name2"
+                android:layout_toRightOf="@+id/iv_name2"
+                style="@style/Address_Edit_Layout_View" />
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:password="true"
+                android:id="@+id/et_tow_pwd"
+                android:background="@null"
+                android:textSize="@dimen/x12"
+                android:textCursorDrawable="@null"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view_name2"
+                android:hint="@string/new_pwd_tow"/>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stateListAnimator="@null"
+            android:layout_marginTop="@dimen/y40"
+            android:textColor="@color/color_white"
+            android:background="@drawable/bg_left_and_right_angle_button"
+            android:enabled="false"
+            android:text="@string/ok_modity" />
+    </LinearLayout>
+</LinearLayout>

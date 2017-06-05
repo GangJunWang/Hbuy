@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/layout_01"
+        style="@style/Page_RelativeLayout"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:id="@+id/tv_user_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/y4"
+            android:gravity="center"
+            android:src="@drawable/issue_white" />
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/buy" />
+        <ImageView
+            android:id="@+id/add"
+            android:layout_marginRight="@dimen/x20"
+            android:src="@drawable/add_pkg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_chat"
+            android:layout_centerVertical="true" />
+        <ImageView
+            android:src="@drawable/online_service_chat"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_alignParentRight="true"
+            android:id="@+id/iv_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_below="@+id/layout_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <RadioGroup
+            android:background="@color/tab_bg"
+            android:id="@+id/rg_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal" >
+            <RadioButton
+                android:paddingTop="@dimen/x10"
+                android:paddingBottom="@dimen/x10"
+                android:id="@+id/rb_daigou"
+                style="@style/BottomTabStyle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/x50"
+                android:layout_marginRight="@dimen/x50"
+                android:background="@drawable/btn_tab_daigou_selector"
+                android:text="@string/daigou_hint" />
+            <RadioButton
+                android:paddingTop="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:paddingBottom="@dimen/x10"
+                android:id="@+id/rb_daifu"
+                style="@style/BottomTabStyle"
+                android:layout_marginLeft="@dimen/x50"
+                android:layout_marginRight="@dimen/x50"
+                android:background="@drawable/btn_tab_daigou_selector"
+                android:layout_height="wrap_content"
+                android:text="@string/daifu_hint" />
+        </RadioGroup>
+    </FrameLayout>
+    <au.com.hbuy.aotong.view.NoScrollViewPager
+        android:layout_below="@+id/frame_layout"
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

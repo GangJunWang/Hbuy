@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/layout_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/x8"
+        android:background="@color/default_color">
+        <TextView
+            android:id="@+id/add"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/add_pkg_img"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/x9"
+            android:drawablePadding="@dimen/x2"
+            android:text="添加包裹" />
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/order_title" />
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/iv_chat"
+            android:textColor="@color/color_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/x9"
+            android:drawablePadding="@dimen/x2"
+            android:drawableTop="@drawable/pkg_chat"
+            android:text="在线客服" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pkg_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/x16"
+        android:weightSum="4">
+        <TextView
+            android:id="@+id/tv_user_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/pkg_transfer"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/x8"
+            android:text="中转地址"/>
+        <TextView
+            android:id="@+id/tv_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/x8"
+            android:drawableTop="@drawable/pkg_wuliu"
+            android:gravity="center"
+            android:text="物流查询" />
+        <TextView
+            android:id="@+id/tv_pkg_packing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/x8"
+            android:drawableTop="@drawable/pkg_packing"
+            android:gravity="center"
+            android:text="正在打包" />
+        <TextView
+            android:id="@+id/iv_transfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/x8"
+            android:drawableTop="@drawable/pkg_yidao"
+            android:gravity="center"
+            android:text="已到包裹" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/page_bg"/>
+    <LinearLayout
+        android:paddingRight="@dimen/x14"
+        android:paddingLeft="@dimen/x14"
+        android:paddingTop="@dimen/x10"
+        android:paddingBottom="@dimen/x10"
+        android:id="@+id/to_layout"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/x10"
+            android:src="@drawable/to_layout_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x4"
+            android:drawableRight="@drawable/advance_pkg_hint"
+            android:drawableLeft="@drawable/pkg_order_hint"
+            android:textSize="@dimen/x12"
+            android:text="禁运物品知多少？Hbuy通通告诉您！" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x10"
+        android:background="@color/page_bg"
+        android:id="@+id/view_bg"/>
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <RadioGroup
+            android:background="@color/tab_bg"
+            android:id="@+id/rg_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal" >
+            <RadioButton
+                android:paddingTop="@dimen/x10"
+                android:paddingBottom="@dimen/x10"
+                android:id="@+id/rb_inland"
+                style="@style/BottomTabStyle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/btn_tab_daigou_selector"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:text="@string/pkg_inland_hint" />
+            <RadioButton
+                android:paddingTop="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:paddingBottom="@dimen/x10"
+                android:id="@+id/rb_foreign"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginRight="@dimen/x40"
+                style="@style/BottomTabStyle"
+                android:background="@drawable/btn_tab_daigou_selector"
+                android:layout_height="wrap_content"
+                android:text="@string/pkg_foreign_hint" />
+        </RadioGroup>
+    </FrameLayout>
+    <au.com.hbuy.aotong.view.NoScrollViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

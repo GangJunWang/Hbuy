@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_gray" />
+
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="邮箱注册"
+            android:textColor="@color/default_color" />
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="反馈问题"
+            android:textColor="#000"
+            android:textSize="@dimen/x14" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/login_bg_top"
+            android:gravity="center"
+            android:paddingBottom="@dimen/x60">
+            <au.com.hbuy.aotong.view.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/civ_img"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/x60"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/y10"
+                android:layout_marginTop="@dimen/y10"
+                android:clickable="true"
+                android:src="@drawable/hbuy"
+                app:border_color="#FFffffff"
+                app:border_width="1dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginTop="@dimen/x90"
+            android:background="@drawable/add_pkg_edit_layout_angle_login"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/x20"
+            android:orientation="vertical">
+
+            <RelativeLayout style="@style/Address_Edit_Layout">
+                <ImageView
+                    android:id="@+id/iv_name"
+                    style="@style/Address_Edit_Image_View"
+                    android:src="@drawable/email_hint" />
+                <View
+                    android:id="@+id/view_name"
+                    style="@style/Address_Edit_Layout_View"
+                    android:layout_toRightOf="@+id/iv_name" />
+                <au.com.hbuy.aotong.view.AutoFillEmailEditText
+                    android:id="@+id/email_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/view_name"
+                    android:background="@null"
+                    android:hint="输入邮箱地址"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/x12"
+                    app:AutoFillEmailEditText_default_drop_down_divider="true"
+                    app:AutoFillEmailEditText_domains="/@qq.com,@gmail.com,@126.com,@163.com,@yeah.net" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/Address_Edit_Layout"
+                android:layout_width="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_name1"
+                    style="@style/Address_Edit_Image_View"
+                    android:src="@drawable/security_hint" />
+
+                <View
+                    android:id="@+id/view_name1"
+                    style="@style/Address_Edit_Layout_View"
+                    android:layout_toRightOf="@+id/iv_name1" />
+
+                <au.com.hbuy.aotong.view.ClearEditText
+                    android:id="@+id/auto_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/view_name1"
+                    android:background="@null"
+                    android:hint="输入验证码"
+                    android:textSize="@dimen/x12"
+                    android:inputType="number"
+                    android:textCursorDrawable="@null" />
+
+                <TextView
+                    android:id="@+id/code_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/x10"
+                    android:text="获取验证码"
+                    android:textColor="@color/coupon_bg_common" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/Address_Edit_Layout">
+
+                <ImageView
+                    android:id="@+id/iv_pwd"
+                    style="@style/Address_Edit_Image_View"
+                    android:src="@drawable/pwd_hint" />
+
+                <View
+                    android:id="@+id/view_pwd"
+                    style="@style/Address_Edit_Layout_View"
+                    android:layout_toRightOf="@+id/iv_pwd" />
+
+                <au.com.hbuy.aotong.view.ClearEditText
+                    android:id="@+id/pwd_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/view_pwd"
+                    android:background="@null"
+                    android:textSize="@dimen/x12"
+                    android:hint="@string/bound_hint_pwd"
+                    android:password="true"
+                    android:textCursorDrawable="@null" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/Address_Edit_Layout">
+
+                <ImageView
+                    android:id="@+id/iv_pwd1"
+                    style="@style/Address_Edit_Image_View"
+                    android:src="@drawable/pwd_hint" />
+
+                <View
+                    android:id="@+id/view_pwd1"
+                    style="@style/Address_Edit_Layout_View"
+                    android:layout_toRightOf="@+id/iv_pwd1" />
+
+                <au.com.hbuy.aotong.view.ClearEditText
+                    android:id="@+id/pwd_edit_verify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/view_pwd1"
+                    android:background="@null"
+                    android:textSize="@dimen/x12"
+                    android:hint="@string/bound_hint_pwd"
+                    android:password="true"
+                    android:textCursorDrawable="@null" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/register_agree_button"
+                style="@style/Bottom_Button_Style"
+                android:layout_margin="@dimen/x10"
+                android:background="@drawable/bg_left_and_right_angle_button_login"
+                android:stateListAnimator="@null"
+                android:text="注册新账号" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:padding="@dimen/x10"
+                android:textSize="@dimen/x12"
+                android:text="点击注册新账号即表示您同意并遵守" />
+            <TextView
+                android:id="@+id/tv_user_deal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:padding="@dimen/x10"
+                android:text="《华人Hbuy用户注册协议》"
+                android:textColor="@color/phone_register_hint" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

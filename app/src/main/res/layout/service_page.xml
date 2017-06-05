@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/page_bg"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/y10"
+            style="@style/Page_RelativeLayout" >
+            <TextView
+                android:text="@string/service_title"
+                style="@style/Title_Text_Style" />
+        </RelativeLayout>
+    <!--    <au.com.hbuy.aotong.view.SearchView
+            android:layout_marginTop="@dimen/x10"
+            android:id="@+id/service_search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>-->
+
+        <LinearLayout
+            android:id="@+id/layout_01"
+            style="@style/Service_Page_LinearLayout">
+            <ImageView
+                style="@style/Activity_Page_Back_Img"
+                android:src="@drawable/problem"/>
+
+            <LinearLayout
+                style="@style/Service_Page_RelativeLayout" >
+                <TextView
+                    android:text="@string/common_problem"
+                    style="@style/Service_Page_RelativeLayout_TextView" />
+                <TextView
+                    android:text="@string/common_problem_hint"
+                    style="@style/Service_Page_RelativeLayout_TextView_Tow" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+             android:id="@+id/layout_02"
+             style="@style/Service_Page_LinearLayout">
+             <ImageView
+                 style="@style/Activity_Page_Back_Img"
+                 android:src="@drawable/shiping"/>
+             <LinearLayout
+                 style="@style/Service_Page_RelativeLayout" >
+                 <TextView
+                     android:text="@string/shiping_est"
+                     style="@style/Service_Page_RelativeLayout_TextView" />
+                 <TextView
+                     android:text="@string/shiping_est_hint"
+                     style="@style/Service_Page_RelativeLayout_TextView_Tow" />
+             </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="@dimen/y10"
+            android:id="@+id/layout_03"
+            style="@style/Service_Page_LinearLayout">
+            <ImageView
+                style="@style/Activity_Page_Back_Img"
+                android:src="@drawable/description"/>
+
+            <LinearLayout
+                style="@style/Service_Page_RelativeLayout" >
+                <TextView
+                    android:text="@string/process_int"
+                    style="@style/Service_Page_RelativeLayout_TextView" />
+                <TextView
+                    android:text="@string/process_int_hint"
+                    style="@style/Service_Page_RelativeLayout_TextView_Tow" />
+            </LinearLayout>
+        </LinearLayout>
+       <!-- <LinearLayout
+            android:id="@+id/layout_04"
+            style="@style/Service_Page_LinearLayout">
+            <ImageView
+                style="@style/Activity_Page_Back_Img"
+                android:src="@drawable/about"/>
+
+            <LinearLayout
+                style="@style/Service_Page_RelativeLayout" >
+                <TextView
+                    android:text="@string/about_we"
+                    style="@style/Service_Page_RelativeLayout_TextView" />
+                <TextView
+                    android:text="@string/about_we_hint"
+                    style="@style/Service_Page_RelativeLayout_TextView_Tow" />
+            </LinearLayout>
+        </LinearLayout>-->
+        <LinearLayout
+            android:id="@+id/layout_05"
+            style="@style/Service_Page_LinearLayout">
+            <ImageView
+                style="@style/Activity_Page_Back_Img"
+                android:src="@drawable/yunfeigusuan"/>
+            <LinearLayout
+                style="@style/Service_Page_RelativeLayout" >
+                <TextView
+                    android:text="@string/freight_hint"
+                    style="@style/Service_Page_RelativeLayout_TextView" />
+                <TextView
+                    android:text="@string/freight_hint2"
+                    style="@style/Service_Page_RelativeLayout_TextView_Tow" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_06"
+            style="@style/Service_Page_LinearLayout">
+            <ImageView
+                style="@style/Activity_Page_Back_Img"
+                android:src="@drawable/parities"/>
+            <LinearLayout
+                style="@style/Service_Page_RelativeLayout" >
+                <TextView
+                    android:text="汇率牌价"
+                    style="@style/Service_Page_RelativeLayout_TextView" />
+                <TextView
+                    android:text="了解今日汇率"
+                    style="@style/Service_Page_RelativeLayout_TextView_Tow" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_07"
+            style="@style/Service_Page_LinearLayout">
+            <ImageView
+                style="@style/Activity_Page_Back_Img"
+                android:src="@drawable/freight"/>
+            <LinearLayout
+                style="@style/Service_Page_RelativeLayout" >
+                <TextView
+                    android:text="运费报价"
+                    style="@style/Service_Page_RelativeLayout_TextView" />
+                <TextView
+                    android:text="查看最新的运费报表"
+                    style="@style/Service_Page_RelativeLayout_TextView_Tow" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

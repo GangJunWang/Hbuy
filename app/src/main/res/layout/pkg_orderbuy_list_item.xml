@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:layout_marginTop="@dimen/x10"
+    android:orientation="vertical">
+    <TextView
+        android:paddingLeft="@dimen/x12"
+        android:id="@+id/tv_no"
+        android:paddingTop="@dimen/x6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:paddingTop="@dimen/x6"
+        android:paddingBottom="@dimen/x6"
+        android:paddingRight="@dimen/x12"
+        android:paddingLeft="@dimen/x12"
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="@dimen/x15"
+                android:textColor="@color/button_color"
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <au.com.hbuy.aotong.view.NestFullListView
+        android:background="#fafafa"
+        android:id="@+id/lv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <RelativeLayout
+        android:background="@color/color_white"
+        android:padding="@dimen/x10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:id="@+id/tv_num"
+            android:gravity="center"
+            android:padding="@dimen/x6"
+            android:background="@color/color_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+     <!--   <TextView
+            android:id="@+id/tv_status2"
+            android:layout_toRightOf="@+id/tv_num"
+            android:textColor="@color/red_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />-->
+        <TextView
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="去付款"
+            android:background="@drawable/bg_left_and_right_angle_buy_selector"
+            android:stateListAnimator="@null"
+            android:id="@+id/bt_commit"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:paddingTop="@dimen/x4"
+            android:paddingBottom="@dimen/x4"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y40"
+    android:background="@color/color_white"
+    android:orientation="horizontal" >
+    <CheckBox
+        android:id="@+id/cb_select"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/x40"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y40"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/x8"
+            android:orientation="horizontal" >
+                <TextView
+                    android:text="包裹1"
+                    android:layout_marginLeft="@dimen/x4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+                <TextView
+                    android:text="推荐"
+                    android:layout_marginRight="@dimen/x4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="@dimen/x1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x8"
+            android:background="#ffffff"
+            android:orientation="horizontal" >
+            <TextView
+                android:text="78RMB"
+                android:layout_marginLeft="@dimen/x4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+            <TextView
+                android:text="其他物流"
+                android:layout_marginRight="@dimen/x4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

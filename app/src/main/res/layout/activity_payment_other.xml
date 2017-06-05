@@ -1,0 +1,257 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/y1">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="外币支付" />
+    </RelativeLayout>
+    <!--    <RelativeLayout
+            android:layout_marginBottom="@dimen/x1"
+            android:id="@+id/layout_no"
+            android:background="@color/color_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_tab"
+            android:padding="@dimen/y8">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/no" />
+            <TextView
+                android:id="@+id/tv_order_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>-->
+    <RelativeLayout
+        android:id="@+id/layout_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_tab"
+        android:background="@color/color_white"
+        android:padding="@dimen/y8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/payment_money" />
+
+        <TextView
+            android:id="@+id/tv_order_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/red_color" />
+    </RelativeLayout>
+
+    <au.com.hbuy.aotong.view.OverScrollView
+        android:id="@+id/layout"
+        android:layout_below="@+id/layout_02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_margin="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/add_pkg_angle_layout"
+                android:padding="@dimen/y8">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:textColor="@color/color_white"
+                    android:text="选择收款账号国家及银行" />
+                <TextView
+                    android:id="@+id/tv_issue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textColor="@color/color_white"
+                    android:text="收款账户?" />
+            </RelativeLayout>
+            <LinearLayout
+                android:paddingTop="@dimen/x16"
+                android:paddingBottom="@dimen/x16"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <RelativeLayout
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:paddingTop="@dimen/x14"
+                android:paddingBottom="@dimen/x14"
+                android:id="@+id/layout_guojia"
+                android:background="@drawable/bg_left_and_right_angle_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x10" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="国家" />
+                <TextView
+                    android:id="@+id/tv_nation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textColor="@color/button_color"
+                    android:hint="请选择 >" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x10"
+                android:background="@drawable/bg_left_and_right_angle_edit"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:paddingTop="@dimen/x14"
+                android:paddingBottom="@dimen/x14">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="银行" />
+
+                <TextView
+                    android:id="@+id/tv_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textColor="@color/button_color"
+                    android:hint="请选择 >" />
+            </RelativeLayout>
+                <TextView
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingBottom="@dimen/x10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x10"
+                    android:text="收款方账号及转账金额(暂不支持跨行转账)" />
+                <LinearLayout
+                    android:id="@+id/layout_other"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_left_and_right_angle_edit"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10"
+                    android:paddingTop="@dimen/x10"
+                    android:paddingBottom="@dimen/x10">
+                    <TextView
+                        android:id="@+id/tv_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/x10"
+                        android:text="Transfer Money:" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x1"
+                        android:background="#d9d9d9"/>
+                    <TextView
+                        android:id="@+id/tv_bank_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:paddingBottom="@dimen/x10"
+                        android:paddingTop="@dimen/x10"
+                        android:text="Account Name:" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x1"
+                        android:background="#d9d9d9"/>
+                    <TextView
+                        android:id="@+id/tv_bank_num"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/x10"
+                        android:paddingTop="@dimen/x10"
+                        android:layout_height="wrap_content"
+                        android:text="Account Bsb:" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x1"
+                        android:background="#d9d9d9"/>
+                    <TextView
+                        android:paddingTop="@dimen/x10"
+                        android:id="@+id/tv_bank_no"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/x10"
+                        android:layout_height="wrap_content"
+                        android:text="Account No:" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:padding="@dimen/x10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="上传转账凭证截图" />
+            <RelativeLayout
+                android:layout_marginBottom="@dimen/x30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:padding="@dimen/x10">
+                <ImageView
+                    android:padding="@dimen/x10"
+                    android:clickable="true"
+                    android:id="@+id/iv_upload"
+                    android:src="@drawable/other_img_hint"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_select_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="查看示例图片" />
+            </RelativeLayout>
+        </LinearLayout>
+    </au.com.hbuy.aotong.view.OverScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white">
+        <Button
+            android:id="@+id/bt_ok_payment"
+            style="@style/Bottom_Button_Style"
+            android:layout_margin="@dimen/x10"
+            android:stateListAnimator="@null"
+            android:text="完成支付" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:background="@color/button_color"
+        android:drawableLeft="@drawable/add_pkg_jin"
+        android:drawablePadding="@dimen/x5"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/x10"
+        android:text="禁运物品知多少?"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/x13" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:background="@color/color_white"
+        android:padding="@dimen/x10"
+        android:text="@string/jinyun_hint"
+        android:textColor="@color/default_color"
+        android:textSize="@dimen/x14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:background="@color/button_color"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_gochat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="咨询客服禁运物品"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/x14" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="@dimen/x16"
+            android:background="#60d5b3" />
+
+        <TextView
+            android:id="@+id/tv_issue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/x5"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:text="查看转运常见问题"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/x14" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/default_color" >
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <au.com.hbuy.aotong.view.NoScrollViewPager
+            android:id="@+id/viewpager"
+            android:layout_marginTop="@dimen/x4"
+            android:layout_marginBottom="@dimen/x4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </au.com.hbuy.aotong.view.NoScrollViewPager>
+        <Button
+            android:layout_alignParentBottom="true"
+            android:stateListAnimator="@null"
+            android:text="下一步"
+            android:textColor="@drawable/btn_guide_selector"
+            android:id="@+id/bt_enter"
+            android:layout_above="@+id/ly_dots"
+            android:layout_margin="@dimen/x20"
+            android:background="@drawable/bg_left_and_right_angle_button_userguide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

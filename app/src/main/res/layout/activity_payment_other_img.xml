@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_window"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/y1">
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="上传凭证" />
+    </RelativeLayout>
+    <TextView
+    android:id="@+id/tv_shoukuanfang"
+    android:padding="@dimen/x10"
+    android:gravity="left"
+    android:layout_below="@+id/title_tab"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:text="转账说明" />
+    <TextView
+        android:id="@+id/tv_kj"
+        android:background="@color/color_white"
+        android:padding="@dimen/x10"
+        android:gravity="left"
+        android:layout_below="@+id/tv_shoukuanfang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="1.尽量同一银行内转账, 跨行会产生时效延迟\n\n2.凭证图片文字清晰, 不可自行涂改\n\n3.转账金额与订单金额不足的, 请联系客服补齐" />
+    <TextView
+        android:id="@+id/tv_look_img"
+        android:padding="@dimen/x10"
+        android:gravity="right"
+        android:layout_marginTop="@dimen/x10"
+        android:drawableRight="@drawable/select_other"
+        android:layout_below="@+id/tv_kj"
+        android:background="@color/color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red_color"
+        android:text="查看示例图片" />
+    <TextView
+        android:id="@+id/tv_hint"
+        android:padding="@dimen/x10"
+        android:gravity="left"
+        android:layout_below="@+id/tv_look_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择图片" />
+    <LinearLayout
+        android:layout_below="@+id/tv_hint"
+        android:background="@color/color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:padding="@dimen/x10"
+            android:clickable="true"
+            android:id="@+id/iv_upload"
+            android:src="@drawable/other_img_hint"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:layout_margin="@dimen/x10"
+        android:stateListAnimator="@null"
+        android:id="@+id/bt_ok_payment"
+        style="@style/Bottom_Button_Style"
+        android:text="上传凭证" />
+    </LinearLayout>
+</RelativeLayout>

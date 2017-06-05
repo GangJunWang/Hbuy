@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/Title_Text_Style"
+            android:text="@string/add_buy" />
+
+        <ImageView
+            android:id="@+id/iv_buy_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_toLeftOf="@+id/iv_cart"
+            android:src="@drawable/buy_cart" />
+
+        <ImageView
+            android:id="@+id/iv_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x10"
+            android:src="@drawable/online_service_chat" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_tab"
+        android:background="@color/repo_hint_title_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/x10">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/repo_hint_title_bg"
+            android:text="@string/buy_hint"
+            android:textColor="@color/repo_hint_title"
+            android:textSize="@dimen/x12"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x10"
+            android:src="@drawable/issue_buy" />
+    </RelativeLayout>
+
+    <au.com.hbuy.aotong.view.OverScrollView
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hint"
+        android:layout_marginBottom="@dimen/x15"
+        android:layout_marginLeft="@dimen/y10"
+        android:layout_marginRight="@dimen/y10"
+        android:layout_marginTop="@dimen/y15"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv"
+            android:background="@drawable/bg_left_and_right_angle_layout"
+            android:orientation="vertical"
+            android:padding="@dimen/x10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x10"
+                android:background="@drawable/bg_left_and_right_angle_edit"
+                android:orientation="horizontal">
+
+                <au.com.hbuy.aotong.view.ClearEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@null"
+                    android:hint="@string/buy_name_hint"
+                    android:padding="@dimen/x10"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/x13" />
+
+                <TextView
+                    android:id="@+id/tv_issue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:padding="@dimen/x10"
+                    android:text="如何复制链接?"
+                    android:textSize="@dimen/x13" />
+            </RelativeLayout>
+
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:id="@+id/et_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_left_and_right_angle_edit"
+                android:hint="@string/buy_num_hint"
+                android:numeric="integer"
+                android:padding="@dimen/x10"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/x13" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/x10"
+                android:paddingLeft="@dimen/x20"
+                android:paddingTop="@dimen/x10"
+                android:text="@string/buy_size_hint"
+                android:textColor="#666666"
+                android:textSize="@dimen/x13" />
+
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:id="@+id/et_size"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y72"
+                android:background="@drawable/bg_left_and_right_angle_edit"
+                android:gravity="top"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:paddingTop="@dimen/y10"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/x13" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/x10"
+                android:paddingLeft="@dimen/x20"
+                android:paddingTop="@dimen/x10"
+                android:text="@string/buy_mk_hint"
+                android:textColor="#666666"
+                android:textSize="@dimen/x13" />
+
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:id="@+id/et_mk"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y72"
+                android:layout_marginBottom="@dimen/x10"
+                android:background="@drawable/bg_left_and_right_angle_edit"
+                android:gravity="top"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:paddingTop="@dimen/y10"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/x13" />
+        </LinearLayout>
+    </au.com.hbuy.aotong.view.OverScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white"
+        android:paddingBottom="@dimen/x10"
+        android:paddingTop="@dimen/x10">
+
+        <Button
+            android:id="@+id/bt_add_pkg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@drawable/bg_left_and_right_angle_button"
+            android:stateListAnimator="@null"
+            android:text="@string/bt_add_pkg"
+            android:textColor="@color/page_bg" />
+    </LinearLayout>
+</RelativeLayout>

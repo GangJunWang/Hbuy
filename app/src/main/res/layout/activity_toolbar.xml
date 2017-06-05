@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorAccent">
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/Title_Text_Style"
+            android:textColor="@color/color_white"
+            android:text="@string/bt_login" />
+    </android.support.v7.widget.Toolbar>
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_white">
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_gray" />
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/find_pwd"
+            android:textColor="@color/default_color" />
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="反馈问题"
+            android:textColor="#000"
+            android:textSize="@dimen/x14" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/login_bg_top"
+            android:gravity="center"
+            android:paddingBottom="@dimen/x60">
+            <au.com.hbuy.aotong.view.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/civ_img"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/x60"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/y10"
+                android:layout_marginTop="@dimen/y10"
+                android:clickable="true"
+                android:src="@drawable/hbuy"
+                app:border_color="#FFffffff"
+                app:border_width="1dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginTop="@dimen/x90"
+            android:background="@drawable/add_pkg_edit_layout_angle_login"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/x20"
+            android:orientation="vertical">
+            <TextView
+                android:text="填写注册信息"
+                android:id="@+id/tv_title_hint"
+                android:padding="@dimen/x10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                style="@style/Address_Edit_Layout">
+                <TextView
+                    android:text="账号"
+                    android:paddingLeft="@dimen/x20"
+                    android:paddingRight="@dimen/x20"
+                    android:id="@+id/iv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" />
+                <View
+                    android:id="@+id/view_name"
+                    android:layout_toRightOf="@+id/iv_name"
+                    style="@style/Address_Edit_Layout_View" />
+                <au.com.hbuy.aotong.view.ClearEditText
+                    android:id="@+id/et_number"
+                    android:background="@null"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/x12"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/view_name"
+                    android:hint="@string/find_pwd_hint" />
+            </RelativeLayout>
+            <Button
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                style="@style/Bottom_Button_Style"
+                android:background="@drawable/bg_left_and_right_angle_button_login"
+                android:layout_marginTop="@dimen/x20"
+                android:id="@+id/bt_find_pwd"
+                android:stateListAnimator="@null"
+                android:text="下一步" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

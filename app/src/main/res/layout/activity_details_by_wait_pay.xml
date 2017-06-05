@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_marginBottom="@dimen/y1">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/pkg_details" />
+
+        <TextView
+            android:id="@+id/tv_touch_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x5"
+            android:text="@string/touch_us"
+            android:textColor="@color/bt_add_pkg_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_01"
+        style="@style/Page_RelativeLayout"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_tab"
+        android:padding="@dimen/x8">
+
+        <TextView
+            android:id="@+id/tv_no"
+            style="@style/Text_Big_Color"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/hbuy" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_02"
+        style="@style/Page_RelativeLayout"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_01"
+        android:padding="@dimen/x8">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        style="@style/Text_Big_Color"
+        android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/layout_02"
+        android:layout_marginBottom="@dimen/x1"
+        android:background="@color/tab_bg"
+        android:padding="@dimen/x8"
+        android:text="运费方案" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tv_01"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y30"
+        android:layout_below="@+id/tv"
+        android:background="@color/tab_bg"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            style="@style/Text_Big_Color"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="名称" />
+
+        <TextView
+            style="@style/Text_Big_Color"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="价格(RMB)" />
+
+        <TextView
+            style="@style/Text_Big_Color"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="物流" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_01"
+        android:background="@color/tab_bg"
+        android:divider="@null"></ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lv_orders"
+        android:layout_marginTop="@dimen/x1"
+        android:background="@color/tab_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_all_money"
+            style="@style/Text_Big_Color"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/x14" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/bt_ok"
+        android:text="提交订单"
+        style="@style/Bottom_Button_Style" />
+</RelativeLayout>

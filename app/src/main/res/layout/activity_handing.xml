@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/x8"
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_alignParentTop="true" >
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/Title_Text_Style"
+            android:text="@string/waiting_review" />
+    </RelativeLayout>
+
+    <include
+        layout="@layout/pkg_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_tab" />
+</RelativeLayout>

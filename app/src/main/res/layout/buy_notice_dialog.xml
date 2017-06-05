@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/layout_02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:background="@drawable/add_pkg_angle_layout"
+            android:drawableLeft="@drawable/issue_buy"
+            android:drawablePadding="@dimen/x5"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:text="为什么要寄到Hbuy中转地址?"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/x13" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/color_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:padding="@dimen/x10"
+            android:textSize="@dimen/x12"
+            android:lineSpacingExtra="@dimen/x2"
+            android:maxLines="3"
+            android:text="Hbuy中转地址是我们公司对包裹的收取、处理、发送的中转站, 您的包裹会经过我们的检查、核验、打包后统一为您发送。 "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+            <ImageView
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_pkg_hint_img" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

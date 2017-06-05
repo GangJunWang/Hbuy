@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 连框颜色值 -->
+    <item>
+        <shape>
+            <solid android:color="@color/color_white"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/coupon_bg_common"/>
+        </shape>
+    </item>
+    <!--上面 为 设置 阴影 效果-->
+    <!-- 选中 显示 的 颜色-->
+    <item
+        android:bottom="@dimen/x2">
+        <shape>
+            <solid android:color="@color/coupon_bg_common"/>
+        </shape>
+    </item>
+    <item
+        android:bottom="@dimen/x2">
+        <shape>
+            <solid android:color="@color/color_white"/>
+        </shape>
+    </item>
+</layer-list>

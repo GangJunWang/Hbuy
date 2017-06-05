@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/x30"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x60"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/hbuy_logo" />
+        <TextView
+            android:layout_marginTop="@dimen/x8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="专属私人仓库"
+            android:textColor="#000"
+            android:textSize="@dimen/x18"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_marginTop="@dimen/x6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="您国内的免费私人小仓库"
+            android:textColor="#666"
+            android:textSize="@dimen/x12"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <fr.castorflex.android.verticalviewpager.VerticalViewPager
+        android:layout_below="@+id/top_layout"
+        android:id="@+id/verticalviewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <Button
+        android:layout_alignParentBottom="true"
+        android:stateListAnimator="@null"
+        android:text="下一步"
+        android:textColor="@drawable/btn_guide_selector"
+        android:id="@+id/bt_enter"
+        android:layout_above="@+id/ly_dots"
+        android:layout_margin="@dimen/x20"
+        android:background="@drawable/bg_left_and_right_angle_button_userguide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

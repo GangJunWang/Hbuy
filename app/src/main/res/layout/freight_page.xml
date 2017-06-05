@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_color"
+    android:orientation="vertical">
+    <TextView
+        android:text="基准货币"
+        android:textColor="@color/page_bg"
+        android:padding="@dimen/x10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginLeft="@dimen/x10"
+            android:src="@drawable/china"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/iv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="@dimen/x10"
+            android:id="@+id/tv_name"
+            android:layout_toRightOf="@+id/iv_hint"
+            android:text="RMB"
+            android:padding="@dimen/x10"
+            android:textColor="@color/color_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:background="@null"
+                android:id="@+id/et_edit"
+                android:text="0.00"
+                android:layout_gravity="right"
+                android:cursorVisible="false"
+                android:numeric="decimal"
+                android:textColor="@color/color_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_name_hint"
+                android:text="人民币"
+                android:layout_gravity="right"
+                android:textColor="@color/page_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:text="换算货币"
+        android:layout_marginBottom="@dimen/x10"
+        android:textColor="@color/page_bg"
+        android:padding="@dimen/x10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

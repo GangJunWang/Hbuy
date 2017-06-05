@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/Title_Text_Style"
+            android:text="@string/add_wait_pay" />
+        <ImageView
+            android:layout_marginRight="@dimen/x20"
+            android:id="@+id/iv_buy_cart"
+            android:src="@drawable/buy_cart"
+            android:layout_toLeftOf="@+id/iv_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@drawable/online_service_chat"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_alignParentRight="true"
+            android:id="@+id/iv_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv"
+        android:layout_below="@+id/title_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/repo_hint_title_bg"
+        android:paddingBottom="@dimen/x10"
+        android:paddingLeft="@dimen/x20"
+        android:paddingTop="@dimen/x10"
+        android:text="目前只支持支付宝支付"
+        android:textColor="@color/repo_hint_title"
+        android:textSize="@dimen/x12"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_marginLeft="@dimen/y10"
+        android:layout_marginRight="@dimen/y10"
+        android:layout_marginTop="@dimen/y15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv"
+        android:background="@drawable/bg_left_and_right_angle_layout"
+        android:orientation="vertical"
+        android:padding="@dimen/x10">
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/x10"
+            android:background="@drawable/bg_left_and_right_angle_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:id="@+id/et_name"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x10"
+                android:textSize="@dimen/x13"
+                android:background="@null"
+                android:hint="@string/add_wait_pay_hint1"
+                android:textCursorDrawable="@null" />
+            <TextView
+                android:layout_marginLeft="@dimen/x10"
+                android:id="@+id/tv_issue"
+                android:textSize="@dimen/x13"
+                android:textColor="#bfbfbf"
+                android:padding="@dimen/x10"
+                android:text="查看账户名?"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <au.com.hbuy.aotong.view.ClearEditText
+            android:id="@+id/et_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:background="@drawable/bg_left_and_right_angle_edit"
+            android:gravity="top"
+            android:hint="@string/add_wait_pay_hint2"
+            android:numeric="decimal"
+            android:textCursorDrawable="@null" />
+       <!-- <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/x10"
+            android:paddingLeft="@dimen/x20"
+            android:paddingTop="@dimen/x10"
+            android:text="备注信息"
+            android:textColor="#666666"
+            android:textSize="@dimen/x13" />
+        <au.com.hbuy.aotong.view.ClearEditText
+            android:id="@+id/et_mk"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y72"
+            android:background="@drawable/bg_left_and_right_angle_edit"
+            android:gravity="top"
+            android:textCursorDrawable="@null" />-->
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white"
+        android:paddingBottom="@dimen/x10"
+        android:paddingTop="@dimen/x10">
+        <Button
+            android:id="@+id/bt_add_pkg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@drawable/bg_left_and_right_angle_button"
+            android:stateListAnimator="@null"
+            android:text="@string/bt_add_pkg"
+            android:textColor="@color/page_bg" />
+    </LinearLayout>
+</RelativeLayout>

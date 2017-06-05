@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_marginBottom="@dimen/x1">
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/my_coupon" />
+    </RelativeLayout>
+    <include
+        android:layout_above="@+id/layout_di"
+        android:gravity="center"
+        android:layout_below="@+id/title_tab"
+        layout="@layout/pkg_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_di"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        style="@style/Bottom_Button_Style"
+        android:layout_margin="@dimen/x20"
+        android:id="@+id/bt_cancel"
+        android:stateListAnimator="@null"
+        android:text="不使用优惠卷" />
+    </LinearLayout>
+</RelativeLayout>

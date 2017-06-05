@@ -1,0 +1,303 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">华人Hbuy</string>
+    <string name="order">订单</string>
+    <string name="tab_service">服务</string>
+    <string name="bt_register">手机号注册</string>
+    <string name="hint_username">输入用户名</string>
+    <string name="register_hint_verify_pwd">确认密码</string>
+    <string name="hint_pwd">6-18位字母数字组合</string>
+    <string name="register_email">邮箱</string>
+    <string name="register_hint_email">请输入邮箱</string>
+    <string name="tv_weixin">微信登录</string>
+    <string name="bt_login">登 录</string>
+    <string name="tv_pwd">忘记密码 ></string>
+    <string name="tv_register">注册账号 ></string>
+    <string name="umeng_socialize_text_weixin_key">微信</string>
+    <string name="umeng_socialize_text_weixin_circle_key">微信朋友圈</string>
+    <string name="umeng_socialize_text_weixin_fav_key">微信收藏</string>
+    <string name="umeng_socialize_female">女</string>
+    <string name="umeng_socialize_male">男</string>
+    <string name="service_title">服务</string>
+    <string name="order_title">华人Hbuy</string>
+    <string name="add_pkg">添加包裹</string>
+    <string name="tv_name">物流公司</string>
+    <string name="et_name_hint">请选择</string>
+    <string name="tv_content">包裹内容</string>
+    <string name="et_content_hint">请填写包裹内容</string>
+    <string name="add_pkg_hint">填写寄往Hbuy的物流单号, 可以随时跟踪物流信息哦。</string>
+    <string name="tv_details">查看</string>
+    <string name="pkg_details">转运订单</string>
+    <string name="android_auto_update_download_progress">正在下载:%1$d%%</string>
+    <string name="android_auto_update_dialog_title">发现新版本</string>
+    <string name="android_auto_update_dialog_btn_download">立即下载</string>
+    <string name="android_auto_update_dialog_btn_cancel">以后再说</string>
+    <string name="repo_address">上海普陀区金沙江路1340弄A区7栋3层5室</string>
+    <string name="jinyun_hint">亲~邮寄物品分国际管制和国内管制哟!”禁运物品”寄到Hbuy中转仓也没法帮您转运出去呢!为了给您更好的转运体验,请跟随小buy一起了解“禁运物品”有哪些吧！O(∩_∩)O~</string>
+    <string name="repo_address_copy_msg">收件人:爱趣买\n收件电话:18521595545\n仓库地址:上海市普陀区金沙江路1340弄A区7栋3层5室\n邮编:200333</string>
+    <string name="bt_copy_msg">复制全部信息</string>
+    <string name="bt_add_pkg">完成添加</string>
+    <string name="stay_pay">待付款</string>
+    <string name="tv_hint_hbuy_home">不填单号,包裹已寄往Hbuy</string>
+    <string name="waiting_review">处理中</string>
+    <string name="wait_signfor">待签收</string>
+    <string name="correlation_setting">常用功能</string>
+    <string name="preferences">偏好设置</string>
+    <string name="overseas_goods_address">海外收货地址</string>
+    <string name="edit_address_hint_title">为确保您顺利发货，请使用当地语言填写地址</string>
+    <string name="hbuy_repo_address">我的中转地址</string>
+    <string name="security_center">安全中心</string>
+    <string name="online_customer_service">在线客服</string>
+    <string name="about_hbuy">关于Hbuy</string>
+    <string name="pkg_empty_text">请先邮寄您的包裹到\nHbuy专属仓库的地址</string>
+    <string name="pkg_empty_address">获取地址</string>
+    <string name="pkg_empty_chat">联系客服</string>
+    <string name="me">我的</string>
+    <string name="usename">用户名</string>
+    <string name="sex">性别</string>
+    <string name="select">请选择物流商家</string>
+    <string name="now_nation">现居国家</string>
+    <string name="city">城市</string>
+    <string name="modity_login_pwd">修改登录密码</string>
+    <string name="out_login">退出当前账号</string>
+    <string name="save_account_message">保存账号信息</string>
+    <string name="old_pwd">输入旧密码</string>
+    <string name="old_pwd_hint">旧密码</string>
+    <string name="setting_new_pwd">设置新密码</string>
+    <string name="setting_new_pwd_hint">6-20位密码,包含英文和数字</string>
+    <string name="new_pwd_tow">重复新密码</string>
+    <string name="ok_modity">确认修改</string>
+    <string name="select_nation">请选择国家</string>
+    <string name="input_keyword_hint">请输入关键字</string>
+    <string name="add_new_address">添加新地址</string>
+    <string name="save">保存</string>
+    <string name="consignee">收货人</string>
+    <string name="phone">联系电话</string>
+    <string name="zip">邮编</string>
+    <string name="details_address">详细地址</string>
+    <string name="set_default_address">设为默认地址</string>
+    <string name="phone_number">18521595545</string>
+    <string name="zip_number">200333</string>
+    <string name="repo_address_tow">仓库地址</string>
+    <string name="repo_address_usename">爱趣买</string>
+    <string name="repo_succeed_address">复制地址成功</string>
+    <string name="freight_est">运费估算</string>
+    <string name="shiping_est">视频简介</string>
+    <string name="shiping_est_hint">观看Hbuy宣传视频</string>
+    <string name="freight_est_hint">运费想要早知道,我们帮你计算好</string>
+
+    <string name="good">商品</string>
+    <string name="good_hint">输入商品名称</string>
+    <string name="volume">体积</string>
+    <string name="volume_hint">体积</string>
+    <string name="weight">重量</string>
+    <string name="weight_hint">重量</string>
+    <string name="estimate_bt">开始估算</string>
+    <string name="tv_hint_net">网络连到木星上去了,请检查网络</string>
+    <string name="net_hint">网络连到木星上去了</string>
+    <string name="line_payment">在线支付</string>
+    <string name="order_name">订单名称</string>
+    <string name="payment_money">支付金额(¥)</string>
+    <string name="payment_style">选择支付方式</string>
+    <string name="payment_weixin">微信支付</string>
+    <string name="payment_other">转账汇款</string>
+    <string name="payment_zhifubao">支付宝支付</string>
+    <string name="ok_payment">确认支付</string>
+    <string name="customer_service">客服</string>
+    <string name="tv_back">返回登录</string>
+    <string name="common_problem">常见问题</string>
+    <string name="common_problem_hint">禁运物品/集运条款</string>
+    <string name="process_int">流程介绍</string>
+    <string name="process_int_hint">不知道怎么买? 没关系, 看这里</string>
+    <string name="about_we">关于我们</string>
+    <string name="about_we_hint">一流的物流团队, 成熟的业务流程</string>
+    <string name="information_feedback">信息反馈</string>
+    <string name="information_feedback_ok">确认反馈</string>
+    <string name="information_feedback_hint">请输入您要说的话!~</string>
+    <string name="complete_data">完善资料</string>
+    <string name="new_username">创建账号</string>
+    <string name="old_username">绑定账号</string>
+    <string name="daigou_hint">代购单</string>
+    <string name="daifu_hint">代付单</string>
+    <string name="pkg_inland_hint">寄往Hbuy包裹</string>
+    <string name="pkg_foreign_hint">已转运包裹</string>
+    <string name="transfer_pkg">我的Hbuy私人仓库</string>
+    <string name="all_select">全选</string>
+    <string name="next">下一步</string>
+    <string name="transfer_pkg_hint">您共有2个包裹要转运</string>
+    <string name="select_receiver_address">选择收货地址</string>
+    <string name="buy_notice_ok">信息无误, 提交代购</string>
+    <string name="select_receiver_ok">确认选择</string>
+    <string name="select_receiver_manage">管理</string>
+    <string name="message_details">消息详情</string>
+    <string name="waiting_review_hint">为了能尽快给您安排发货,请配合我们完成审核</string>
+    <string name="check_pkg_hint">请处理订单信息</string>
+    <string name="check_pkg_hint_msg">去处理</string>
+    <string name="create_order_list">结算列表</string>
+    <string name="pay">付款</string>
+    <string name="pkg">包裹</string>
+    <string name="sign_for">已签收</string>
+    <string name="service_name">Hbuy客服001(美美)</string>
+    <string name="me_message">我的消息</string>
+    <string name="waiting_pay">待付款</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <string name="pkg_detail">物流详情</string>
+    <string name="touch_us">联系我们</string>
+    <string name="modify_address">修改地址</string>
+    <string name="my_mai">历史记录</string>
+    <string name="logistics_msg">物流信息</string>
+    <string name="pay_succeed">付款成功</string>
+    <string name="pay_succeed_hint_01">恭喜您,付款成功!</string>
+    <string name="pay_succeed_hint_02">马上为您安排发货, 请留意相关信息</string>
+    <string name="pay_succeed_hint_03">接下来, 您可以</string>
+    <string name="continue_transport">继续转运</string>
+    <string name="to_look">去查看</string>
+    <string name="transfer_order">转运订单</string>
+    <string name="delete_order">删除订单</string>
+    <string name="look_pkg">立即拆包</string>
+    <string name="pay_order">订单详情</string>
+    <string name="order_details">订单详情</string>
+    <string name="packing_hint">飞速打包中，稍等片刻~</string>
+    <string name="no">订单编号</string>
+    <string name="tv_number">物流单号</string>
+    <string name="et_numbers_hint">包裹物流单号</string>
+    <string name="register_email_hint">请输入邮箱</string>
+    <string name="tv_hint_hbuy">填写寄往Hbuy的国内包裹</string>
+    <string name="tv_hint_hbuy_xiao">(物流信息首页显示更新)</string>
+    <string name="complete_hint">完成</string>
+    <string name="bound_hint">绑定</string>
+    <string name="bound_hint_username">请输入平台账号</string>
+    <string name="bound_hint_pwd">请输入密码</string>
+    <string name="find_pwd">找回密码</string>
+    <string name="find_pwd2">验证身份</string>
+    <string name="weixin_find_pwd">微信找回密码</string>
+    <string name="ok_find_pwd">确定</string>
+    <string name="find_pwd_text">用户名/邮箱</string>
+    <string name="find_pwd_hint">用户名/邮箱/手机号</string>
+    <string name="repetition_pwd_tow">重复密码</string>
+    <string name="no_net_hint">请连接网络后再试</string>
+    <string name="pkg_img_hint">包裹图片</string>
+    <string name="email_hint_register">没有手机号?用邮箱注册 ></string>
+    <string name="warm_hint">温馨提示</string>
+    <string name="warm_hint_nowifi">您当前不是处于wifi下,土豪可以继续哈</string>
+    <string name="txt_getMsgCode_validate">获取验证码</string>
+    <string name="history_order">历史订单</string>
+    <string name="account_setting">账号管理</string>
+    <string name="work_order">打包</string>
+    <string name="transfer_guide">转运指南</string>
+    <string name="buy_guide">代购指南</string>
+    <string name="start_transfer">开始打包</string>
+    <string name="waiting_submit">待下单</string>
+    <string name="logout">注销登录</string>
+    <string name="start_ok">开启Hbuy生活之旅</string>
+    <string name="history_pkg">历史包裹</string>
+    <string name="phone_edit">请输入手机号</string>
+    <string name="my_coupon">我的优惠券</string>
+    <string name="us_share">分享我们</string>
+    <string name="us_check">检查更新</string>
+    <string name="us_new_version">当前版本</string>
+    <string name="us_net">网络检测</string>
+    <string name="us_hbuy">关于我们</string>
+    <string name="us_hbuy_web">官方网站\t\twww.hbuy.com.au</string>
+    <string name="us_hbuy_weixin">微信公众号\t\taus-hbuy</string>
+    <string name="us_hbuy_weibo">新浪微博\t\tHbuy网购国货转运海外服务平台</string>
+    <string name="us_hbuy_below">Copyright © 2014 - 2017\n上海澳通信息技术有限公司</string>
+    <string name="us_hbuy_phone">客服热线\t\t86 4008-518-880</string>
+    <string name="us_hbuy_details">\t\t\t\t爱趣买, 2014年5月成立, 总要业务为海外华人提供国内物品的代购和转运服务。我们以最低的国际运费价格、最快的运输时间, 给您最优质的购物体验。
+\n\n\t\t\t\t最低的国际运费价格, 国内转寄澳洲运费6刀起!更快的物流体验, 国内买东西1天就到, 真正与中国0距离！\n\n
+\t\t\t\t最贴心的客服, 在转运中我们的客服将全程为您提供咨询服务, 在使用过程中您有什么疑问都可以直接咨询客服, 我们将在第一时间解答您的服务。
+</string>
+    <string name="buy_list">代购清单</string>
+    <string name="buy">代购</string>
+    <string name="waitpay_list">代付清单</string>
+    <string name="add_buy">添加代购</string>
+    <string name="buy_hint">暂时不支持购买虚拟物品</string>
+    <string name="edit_address_hint">寄往日本请使用日语填写, 否则可能派送不到哦！</string>
+    <string name="edit_address_hint_start">请先选择您要寄往的国家</string>
+    <string name="buy_notice_hint">亲, 代购的商品会先发到Hbuy中转地址统一处理~</string>
+    <string name="buy_notice_hint01">某商品出现缺货/断货情况的处理办法:</string>
+    <string name="buy_notice_hint02">备注信息(其他要求):</string>
+    <string name="title_activity_my_coupon">MyCouponActivity</string>
+    <string name="buy_name_hint">代购商品链接</string>
+    <string name="buy_num_hint">代购商品(个/件)</string>
+    <string name="buy_size_hint">尺码、长度、形状</string>
+    <string name="buy_mk_hint">备注信息</string>
+    <string name="add_wait_pay">添加代付</string>
+    <string name="add_wait_pay_hint1">支付宝名或淘宝邮箱/手机号</string>
+    <string name="add_wait_pay_hint2">代付金额(人民币 CNY)</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="complete_name_hint">输入中文或者中英文</string>
+    <string name="email_hint">邮箱地址用于接收验证邮件, 请注意查收</string>
+    <string name="setting_pwd">设置密码</string>
+    <string name="freight_hint">运费估算</string>
+    <string name="buy_notice">代购须知</string>zfb
+    <string name="waitpay_notice">代付须知</string>
+    <string name="zfb">Jessie_19860108@hotmail.com</string>
+    <string name="freight_hint2">运费早知道, 提前计算好</string>
+    <string name="user_deal">华人Hbuy用户注册协议
+在此特别提醒您在注册成为华人Hbuy用户之前，请认真阅读本《用户协议》（以下简称“协议”），确保您充分理解本协议中各条款。在您点击“注册新账号”按钮后，本协议即刻生效，并形成对双方具有法律约束力的文件协议。
+本协议是您与Hbuy海外转运平台（网址：hbuy.com.au,手机APP：华人Hbuy）（本平台）所有者上海澳通信息技术有限公司之间关于“海外转运”服务（以下简称“服务”）的权利义务订立的协议。“用户”是指注册、登录、使用本服务的个人。本协议可由华人Hbuy随时更新，更新后的条款一旦公布即替代原来的协议条款，恕不再另行通知，用户可在本APP中查阅最新的新版协议条款。在修改协议条款后，如果用户不接受修改后的条款，请立即停止使用华人Hbuy提供的海外转运服务，用户继续使用海外转运服务将被视为接受修改后的协议。
+\n一、账号注册
+\n\n1、用户在使用本服务前需要注册一个用户账号，该账号应当使用手机号、邮箱或微信号进行注册，请用户使用尚未与该账号绑定的手机号码，以及未被华人Hbuy根据本协议封禁的手机号、邮箱或微信号。华人Hbuy可以根据用户需求或产品需要对账号注册和绑定的方式进行变更，而无需事先通知用户。
+\n2、如若注册申请者有被华人Hbuy封禁的先例或涉嫌虚假注册或滥用他人名义注册，以及其他不能得到许可的理由，华人Hbuy有权将拒绝其注册账号申请。
+\n3、鉴于海外转运服务行业的特殊性，每个手机号仅限于绑定一个华人Hbuy账号，不得进行重复绑定操作，错误操作产生的后果将由用户承担。
+\n4、在用户注册并使用本服务时，华人Hbuy将会读取您的个人信息，以便在必要时能够联系用户，为用户提供更好的使用体验。华人Hbuy读取的信息包括但不限于用户的姓名、地址；华人Hbuy同意对用户的个人信息进行保密工作，不得泄露。
+\n二、平台服务范围
+\n\n1、海外转运服务具体服务内容由华人Hbuy根据实际情况提供，包括但不限于：
+\n（1）客服在线咨询服务；
+\n（2）使用物流服务所代收的快递运费，实际金额以平台统计产生的数据为准；
+\n（3）为国内电商平台代购商品服务，实际商品金额以结算时为准；
+\n2、华人Hbuy有权随时更改或删除用户提交的包裹和订单信息，对于违禁商品的转运不负任何法律相关的责任。
+\n3、所有发送的处理消息和活动消息都可以通过APP平台进行发送。
+\n\n三、用户声明与保证
+\n用户承诺为具有完全民事行为能力的民事主体，且具有达成交易履行义务的能力，并承担以下责任：
+\n（1）用户有义务在注册时提供自己的真实资料，并保证如手机号码、微信号、姓名、所在国际地区等内容的有效性及安全性，保证本平台的工作人员可以通过上述联系方式与用户取得联系。同时，用户也有义务在相关资料实际变更时及时更新有关注册资料。
+\n（2）不得传输发表反动言论：包括煽动抗拒、破坏宪法和法律、行政法规实施的言论，煽动颠覆国家政策，推翻社会主义制度的言论，煽动分裂国家、破坏国家民族统一的言论，煽动民族仇恨、民族歧视、破坏民族团结的言论。
+\n（3）由国内转运海外的商品必须符合中国相关的法律法规；
+\n（4）不得干涉本平台的正常运转，不得侵入本平台及国家服务器。
+\n（5）不得利用本平台从事金融洗钱、窃取商业机密，窃取个人信息等违法犯罪等活动；
+\n（6）不得利用在本平台发表或传输任何违法犯罪的、骚扰性的、中伤他人、辱骂性的、恐吓性的、伤害性的、庸俗的、淫秽的、不文明的等信息资料；
+\n（7）不得利用在本平台注册的账户进行牟利性经营活动；
+本平台有权对于各类不符合以上规定的包裹进行处理，有权作出独立判断并采取暂停或暂时封闭账号等措施。用户须对自身在网上的言论和行为承担相应的法律责任。
+\n\n四、包裹
+\n1、本平台种的包裹物流信息为第三方物流信息服务商提供，物流信息随时可能发生变更，需要发生变更的物流消息平台不做另行通知。众所周知，由于网络传输速度、服务器相应等客观因素影响，本平台显示的信息可能会有一定的滞后性或信息差错，对于上面的情况请用户表示知悉并理解；本平台欢迎各位用户进行纠错，共同营造一个良好的海外转运平台。
+\n2、若包裹状态为“已签收”，而不是“已到中转站”则表示快递未投递至前台或此包裹信息还未录入服务器，此过程中本平台不对此包裹负相关责任。如包裹状态显示为“已到中转站”，则表示本平台已签收了此包裹。包裹在中转仓库中的仓储过程中如外部包装未发生损坏，而内件出现破损、遗失等其他特殊情况，本平台对其不负责，具体维权可问责相应的寄件人、商品卖家或物流公司。如在中转仓库中的仓储过程中发生包裹遗失、外包装大面积破损，则用户可以通过与本平台工作人员联系沟通赔偿事宜。
+\n\n五、转运服务
+\n1、当用户需要使用本平台的海外转运服务时，首先需要将包裹寄至本平台，本平台的地址可通过APP中“我的-中转地址”获取。在使用转运服务之前，请您务必认真仔细确认所购商品的名称、单号、尺寸、收货地址、联系电话、收货人等信息。如因用户疏忽所导致包裹寄送错误或遗失，本平台概不对此类事件负责。收货人与用户本人不一致的，收货人的行为本平台则视为用户本人所操作，因此当转运途中如产生法律后果则用户本人须承担连带责任。
+\n2、转运过程中的用户的收件地址和收件人信息都是由APP自动上传到服务器的信息，如有出现信息错误请及时与我们的工作人员联系更改。转运工单的处理过程中，用户须同本平台工作人员配合完成包裹的内件核对、打包和转运工作。如在转运工单的处理过程中，用户长时间未与本平台工作人协同处理包裹内件，本平台将有权对包裹内件自行处理。当用户与本平台工作完成内件核对、运费方案制定和打包付款工作后，由本平台当天统一进行发货。
+\n3、用户转运的包裹物流信息将由包裹从中转仓库发出后开始更新物流信息，转运包裹的物流信息由第三方物流信息服务商提供，物流信息随时可能发生变更，需要发生变更的物流消息平台不做另行通知。众所周知，由于网络传输速度、服务器相应等客观因素影响，本平台显示的信息可能会有一定的滞后性或信息差错，对于上面的情况请用户表示知悉并理解。
+\n\n六、代购
+\n1、用户在使用本平台提供的代购服务时，需要仔细核对所需代购商品的名称、链接、数量、规格等信息，以及收货人地址、联系电话、收货人等信息。若用户没有提供其他收货地址的，则代购商品默认寄至华人Hbuy仓库地址，由本平台负责签收事宜。
+\n2、代购商品购买成功后，由卖家负责发货，本平台不提供物流追踪服务，如有需要可在卖家发货后与联系客服索要物流单号。
+\n3、如代购商品寄至华人Hbuy仓库，可联系客服进行退换、售后和转运操作，用户自己控制退换时间，中间产生的任何费用将由本平台代为收取。如代购商品寄到除华人Hbuy之外的其他地址，则本平台仅提供物流单号信息，不负责签收、售后等事宜。
+\n4、由于市场变化及各种合理商业变化导致难以控制因素的影响，本平台无法保证用户提交的代购清单中希望购买的商品都会有货；如发生缺货情况，情与客服沟通确认相应的退款事宜；本平台暂不支持虚拟商品的代购，请悉知。
+\n\n七、服务的终止
+\n在下列情况下，本平台有权终止向用户提供服务：
+\n（1）用户违反本用户协议相关规定时，本平台有权终止向该用户提供服务。如该用户再一次直接或间接以他人名义注册为用户的，一经发现，本平台有权单方面直接终止向该用户提供服务；
+\n（2）如本平台通过用户提供的信息需要与用户进行联系时，发现用户的注册信息存在虚假信息，本平台会以其它联系方式通知用户更改，如若用户在三个工作日内仍未能提供新的联系方式，本平台有权终止向该用户提供服务；
+\n（3）用户不得通过程序或人工方式进行刷注册量或作弊，若发现用户存在作弊行为，本平台将立即终止向其提供服务，并有权处理其仓库包裹；
+\n（4）一旦本平台监测到用户提供的数据或信息中存在虚假内容，本平台有权随时终止向该用户提供服务；
+\n（5）本平台协议终止或更新时，用户明示不愿意接受新的用户协议；
+\n（6）其它本平台认为需要终止服务的情况。
+	\n2、服务终止后，本平台没有义务为用户保留原账号中与之相关的任何信息，或转发任何未曾阅读或发送的信息给用户。
+\n\n九、服务的变更、中断
+	\n1、鉴于网络服务的特殊性，用户需同意本平台变更、中断部分或全部的网络服务，并删除（不在保留）用户在使用过程中提交的任何资料，从而无需通知用户，也无需对任何用户或任何第三方承担任何责任。
+\n2、本平台需要定期或不定期地对提供网络服务的平台进行检测或者更新，如因此类情况造成的网络服务在合理的时间的中断，本平台无需为此承担任何责任。
+\n\n十、免责与赔偿声明
+\n1、若本平台已经明示提供服务方式发生变更并提示用户应当注意事项，用户若未按照要求操作所产生的一切后果将由用户自行承担。
+\n2、用户明确同意使用本平台所存在的封箱将完全用户自己承担，因使用本平台而产生的一切后果也由用户自己承担。
+\n3、用户同意保障和维护本平台及其他用户的利益，由于用户在使用本平台存在有违法、不真实、不正当、侵犯第三方合法权益的行为，或用户违反本协议项下的任何条款从而给本平台及任何其他第三方造成损失的，用户同意承担由此造成的损害赔偿责任。
+\n4、用户包裹寄送到华人Hbuy仓库且正常入库，途中发生包裹遗失、损坏等情况的，用户可与工作人员根据包裹价值协商赔偿事宜。
+\n\n十一、其他
+\n1、本平台郑重提醒用户注意本协议中免除本平台责任和限制用户权利的条款，请用户仔细阅读，自助考虑封箱，未成年人应在法定监护人的陪同下阅读本协议。
+\n2、本协议的效力、解释及纠纷的解决，适用于中华人民共和国法律。若用户和本平台之间发生任何纠纷或争议，应首先友好协商解决，若协商不成功，用户同意将纠纷或争议太计较本平台所在地有管辖权的人民法院管辖。
+\n3、本协议的任何条款无论何种原因无效或不具可执行性，其余条款仍有效，对双方具有约束力。
+\n4、本协议最终解释权归上海澳通信息技术有限公司所有，并且保留一切解释和修改的权利
+\n5、本协议2016年12月1日起使用
+</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+</resources>

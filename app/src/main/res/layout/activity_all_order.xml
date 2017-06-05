@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_marginBottom="@dimen/y1">
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/my_mai" />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y29"
+        android:layout_marginBottom="@dimen/y1" >
+        <RadioGroup
+            android:id="@+id/rg_group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y29"
+            android:weightSum="3"
+            android:orientation="horizontal" >
+            <RadioButton
+                android:id="@+id/rb_check"
+                style="@style/BottomTabStyle"
+                android:gravity="center"
+                android:layout_height="@dimen/y29"
+                android:layout_marginRight="@dimen/x1"
+                android:background="@color/tab_bg"
+                android:text="@string/waiting_review" />
+            <RadioButton
+                android:id="@+id/rb_wait_pay"
+                style="@style/BottomTabStyle"
+                android:gravity="center"
+                android:layout_height="@dimen/y29"
+                android:background="@color/tab_bg"
+                android:layout_marginRight="@dimen/x1"
+                android:text="@string/stay_pay" />
+            <RadioButton
+                android:id="@+id/rb_sign_for"
+                style="@style/BottomTabStyle"
+                android:gravity="center"
+                android:layout_height="@dimen/y29"
+                android:background="@color/tab_bg"
+                android:text="@string/wait_signfor" />
+        </RadioGroup>
+    </FrameLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

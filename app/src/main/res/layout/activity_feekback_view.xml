@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_white">
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_gray" />
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="反馈问题"
+            android:textColor="@color/default_color" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x180"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/login_bg_top" />
+        <LinearLayout
+            android:id="@+id/layout_hint"
+            android:layout_marginTop="@dimen/x14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:layout_marginLeft="@dimen/x30"
+                android:src="@drawable/feekback_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="left|center"
+                android:layout_marginLeft="@dimen/x4"
+                android:textSize="@dimen/x12"
+                android:textColor="@color/color_white"
+                android:layout_gravity="left|center"
+                android:text="小buy正在努力的成长!\n您的建议与支持是我们成长的动力！"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/layout_hint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@drawable/add_pkg_edit_layout_angle_login"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/x20">
+            <TextView
+                android:text="问题描述"
+                android:textColor="#666"
+                android:textStyle="bold"
+                android:textSize="@dimen/x13"
+                android:layout_marginBottom="@dimen/x16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:id="@+id/et_feekback"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x160"
+                android:background="@drawable/bg_left_and_right_angle_layout_feekback"
+                android:gravity="top"
+                android:textSize="@dimen/x12"
+                android:textColor="#000"
+                android:hint="你的反馈使我们做的更好"
+                android:padding="@dimen/x10"
+                android:textCursorDrawable="@null" />
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_marginTop="@dimen/x10"
+                android:text="联系方式（为了确保能联系上您，建议使用邮箱）"
+                android:textColor="#666"
+                android:textStyle="bold"
+                android:textSize="@dimen/x13"
+                android:layout_marginBottom="@dimen/x16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <au.com.hbuy.aotong.view.ClearEditText
+                    android:id="@+id/et_contact"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x13"
+                    android:textColor="#000"
+                    android:background="@null"
+                    android:hint="手机号/邮箱"
+                    android:layout_marginRight="@dimen/x34"
+                    android:textCursorDrawable="@null" />
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/iv_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pwd_hint" />
+            </RelativeLayout>
+            <View
+                android:layout_marginTop="@dimen/y4"
+                android:background="#fdd1c7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1" />
+            <Button
+                android:id="@+id/bt_ok"
+                style="@style/Bottom_Button_Style"
+                android:layout_margin="@dimen/x20"
+                android:padding="@dimen/x4"
+                android:background="@drawable/bg_left_and_right_angle_button_login"
+                android:stateListAnimator="@null"
+                android:text="确 定" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
+
+

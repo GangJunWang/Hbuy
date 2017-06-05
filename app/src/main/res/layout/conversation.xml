@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout" >
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/Title_Text_Style"
+            android:text="@string/service_name" />
+        <TextView
+            android:text="去下单"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x10"
+            android:id="@+id/tv_touch_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+<fragment
+    android:id="@+id/conversation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:name="io.rong.imkit.fragment.ConversationFragment"/>
+</LinearLayout>

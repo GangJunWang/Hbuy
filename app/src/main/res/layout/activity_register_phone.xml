@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:background="@color/color_white">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_back"
+            android:src="@drawable/back_gray"
+            style="@style/Activity_Page_Back_Img" />
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/bt_register"
+            android:textColor="@color/default_color" />
+        <TextView
+            android:text="反馈问题"
+            android:textSize="@dimen/x14"
+            android:textColor="#000"
+            android:id="@+id/tv_feedback"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:paddingBottom="@dimen/x60"
+                android:background="@drawable/login_bg_top"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <au.com.hbuy.aotong.view.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/civ_img"
+                    android:layout_width="@dimen/x60"
+                    android:layout_height="@dimen/x60"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/y10"
+                    android:layout_marginTop="@dimen/y10"
+                    android:clickable="true"
+                    android:src="@drawable/hbuy"
+                    app:border_color="#FFffffff"
+                    app:border_width="1dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_bottom"
+                android:background="@drawable/add_pkg_edit_layout_angle_login"
+                android:layout_marginTop="@dimen/x90"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/x24"
+                android:layout_marginLeft="@dimen/x24"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:paddingLeft="@dimen/x24"
+                    android:paddingTop="@dimen/x30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#999"
+                    android:text="为确保您能收到验证码，请先选择国家"
+                    android:layout_marginBottom="@dimen/y10"
+                    android:textSize="@dimen/x12" />
+                <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_marginRight="@dimen/x24"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_hint"
+                        android:layout_centerVertical="true"
+                        android:text="您所在的国家"
+                        android:layout_marginRight="@dimen/x16"
+                        android:textColor="#666"
+                        android:textSize="@dimen/x14"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/code_edit"
+                        android:padding="@dimen/x6"
+                        android:layout_toRightOf="@+id/tv_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:background="@drawable/bg_left_and_right_angle_layout"
+                        android:drawableRight="@drawable/select_other"
+                        android:gravity="center"
+                        android:focusable="false"
+                        android:text="中国" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_pwd"
+                    android:paddingLeft="@dimen/x24"
+                    android:paddingTop="@dimen/x10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="手机号"
+                    android:textColor="#666"
+                    android:layout_marginBottom="@dimen/y10"
+                    android:textSize="@dimen/x14" />
+                <RelativeLayout style="@style/Address_Edit_Layout"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_marginRight="@dimen/x24">
+                    <TextView
+                        android:id="@+id/code_text"
+                        style="@style/Address_Edit_Image_View"
+                        android:text="+86" />
+                    <View
+                        android:id="@+id/view_code"
+                        android:layout_width="@dimen/x1"
+                        android:background="@color/page_bg"
+                        android:layout_marginRight="@dimen/x10"
+                        android:layout_height="@dimen/x29"
+                        android:layout_toRightOf="@+id/code_text" />
+
+                    <au.com.hbuy.aotong.view.ClearEditText
+                        android:id="@+id/phone_edit"
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/view_code"
+                        android:background="@null"
+                        android:textSize="@dimen/x12"
+                        android:textCursorDrawable="@null"
+                        android:hint="@string/phone_edit" />
+                </RelativeLayout>
+                <Button
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:id="@+id/register_agree_button"
+                    style="@style/Bottom_Button_Weixin_Style"
+                    android:background="@drawable/bg_left_and_right_angle_button_login"
+                    android:layout_marginTop="@dimen/x10"
+                    android:stateListAnimator="@null"
+                    android:text="下一步" />
+                <TextView
+                    android:id="@+id/tv_email_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:textColor="@color/darkgray"
+                    android:padding="@dimen/x10"
+                    android:textSize="@dimen/x12"
+                    android:text="@string/email_hint_register" />
+            </LinearLayout>
+        </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_marginBottom="@dimen/x1">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/about_hbuy" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_us_share"
+        style="@style/MePage_Layout_TextView"
+        android:text="@string/us_share" />
+
+    <TextView
+        android:id="@+id/tv_us_check"
+        style="@style/MePage_Layout_TextView"
+        android:text="@string/us_check" />
+
+    <TextView
+        android:id="@+id/tv_us_new_version"
+        style="@style/MePage_Layout_TextView"
+        android:layout_marginBottom="@dimen/x6" />
+    <TextView
+        android:id="@+id/tv_net"
+        style="@style/MePage_Layout_TextView"
+        android:text="@string/us_net" />
+    <TextView
+        android:id="@+id/tv_feedback"
+        style="@style/MePage_Layout_TextView"
+        android:text="软件反馈" />
+
+    <TextView
+        android:id="@+id/tv_us_hbuy"
+        style="@style/MePage_Layout_TextView"
+        android:text="@string/us_hbuy" />
+</LinearLayout>

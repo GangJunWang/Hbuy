@@ -1,0 +1,390 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+
+        <TextView
+            android:id="@+id/tv_hint_title"
+            style="@style/Title_Text_Style"
+            android:text="@string/add_new_address" />
+
+        <TextView
+            android:id="@+id/bt_save"
+            style="@style/Title_Text_Style"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x10"
+            android:text="完成" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hint"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/repo_hint_title_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/x10">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/repo_hint_title_bg"
+            android:text="@string/edit_address_hint_start"
+            android:textColor="@color/repo_hint_title"
+            android:textSize="@dimen/x12"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_hint_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x10"
+            android:src="@drawable/edit_address_hint" />
+    </RelativeLayout>
+    <au.com.hbuy.aotong.view.OverScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/x10">
+
+        <RelativeLayout
+            android:id="@+id/tv_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/x6"
+            android:paddingTop="@dimen/x6">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/x12"
+                android:text="为确保您顺利收货，请使用英语填写" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_look_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="@dimen/x4"
+                android:drawableRight="@drawable/address_issue_hint"
+                android:textSize="@dimen/x12"
+                android:text="查看填写案例"
+                android:textColor="@color/red_color" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/Address_Edit_Layout_After">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x29"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x10"
+                android:textColor="#000"
+                android:textSize="@dimen/x14"
+                android:text="国家" />
+
+            <TextView
+                android:id="@+id/et_nation"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x29"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="@dimen/x10"
+                android:drawableRight="@drawable/select_other"
+                android:gravity="center"
+                android:hint="请选择"
+                android:paddingRight="@dimen/x10" />
+        </RelativeLayout>
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tv_look_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/x4"
+            android:visibility="gone"
+            android:textSize="@dimen/x12"
+            android:drawableRight="@drawable/address_issue_hint"
+            android:text="请填写收件人和护照一致的姓名拼音/英文名"
+            android:textColor="@color/red_color" />
+        <RelativeLayout style="@style/Address_Edit_Layout_After">
+
+            <TextView
+                android:id="@+id/code_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:textColor="#000"
+                android:textSize="@dimen/x14"
+                android:text="收件人" />
+
+            <View
+                android:id="@+id/view_code"
+                style="@style/Address_Edit_Layout_View"
+                android:layout_toRightOf="@+id/code_text" />
+
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/view_code"
+                android:background="@null"
+                android:hint="收件人拼音名(要与护照上的一致)"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/x12" />
+        </RelativeLayout>
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tv_look_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/x4"
+            android:maxLines="2"
+            android:visibility="gone"
+            android:text="               国家码(如：中国- +61)有错误可点击修改
+手机号需在派送地拨打，请不要加“0”等跨区拨打前缀"
+            android:textSize="@dimen/x12"
+            android:textColor="@color/red_color" />
+        <RelativeLayout style="@style/Address_Edit_Layout_After">
+
+            <TextView
+                android:id="@+id/tv_select_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:textColor="#000"
+                android:textSize="@dimen/x14"
+                android:text="+86" />
+
+            <View
+                android:id="@+id/view_code1"
+                style="@style/Address_Edit_Layout_View"
+                android:layout_toRightOf="@+id/tv_select_code" />
+
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/view_code1"
+                android:background="@null"
+                android:hint="收件人联系电话"
+                android:inputType="number"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/x12" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/Address_Edit_Layout_After">
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:textColor="#000"
+                android:textSize="@dimen/x14"
+                android:text="城市/州" />
+
+            <View
+                android:id="@+id/view_code2"
+                style="@style/Address_Edit_Layout_View"
+                android:layout_toRightOf="@+id/tv_hint" />
+
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:id="@+id/et_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/view_code2"
+                android:background="@null"
+                android:hint="请输入州/城市"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/x12" />
+            <TextView
+                android:id="@+id/tv_city_hint_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="@dimen/x4"
+                android:paddingRight="@dimen/x18"
+                android:text="请输入州/城市"
+                android:textColor="@color/page_bg"
+                android:textSize="@dimen/x9"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/Address_repo_Layout"
+            android:layout_height="@dimen/x80">
+
+            <TextView
+                android:id="@+id/tv_address_hint"
+                style="@style/Address_Repo_Layout_TextView"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:text="详细地址"
+                android:textColor="#000"
+                android:textSize="@dimen/x14" />
+
+            <View
+                android:id="@+id/view_address"
+                style="@style/Address_Edit_Layout_View"
+                android:layout_height="@dimen/x64"
+                android:layout_toRightOf="@+id/tv_address_hint" />
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:id="@+id/et_details"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_toRightOf="@+id/view_address"
+                android:background="@null"
+                android:hint="门牌号,街道，城市，州，国家，邮编（地址信息要全）"
+                android:textColor="#000"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/x14" />
+
+            <TextView
+                android:id="@+id/tv_address_hint_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="@dimen/x4"
+                android:paddingRight="@dimen/x8"
+                android:text="门牌号,街道，城市，州，国家，邮编"
+                android:textColor="@color/page_bg"
+                android:textSize="@dimen/x9"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/Address_Edit_Layout_After">
+
+            <TextView
+                android:id="@+id/tv_hint1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:textColor="#000"
+                android:textSize="@dimen/x14"
+                android:text="邮编" />
+
+            <View
+                android:id="@+id/view_code3"
+                style="@style/Address_Edit_Layout_View"
+                android:layout_toRightOf="@+id/tv_hint1" />
+
+            <au.com.hbuy.aotong.view.ClearEditText
+                android:id="@+id/et_zip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/view_code3"
+                android:background="@null"
+                android:hint="请输入邮编"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/x12" />
+            <TextView
+                android:id="@+id/tv_zip_hint_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="@dimen/x4"
+                android:paddingRight="@dimen/x18"
+                android:text="填写邮政编码"
+                android:textColor="@color/page_bg"
+                android:textSize="@dimen/x9"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_left_and_right_angle_layout_repo"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/x10"
+                android:textColor="#000"
+                android:textSize="@dimen/x14"
+                android:text="设为默认地址" />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/cb_default"
+                android:layout_width="59dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x10"
+                toggle:tbBorderWidth="2dp"
+                toggle:tbOffColor="#ddd"
+                toggle:tbOnColor="#76EE00"
+                toggle:tbSpotColor="#ffffff"></com.zcw.togglebutton.ToggleButton>
+        </RelativeLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_go_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20"
+            android:gravity="center"
+            android:text="Hbuy在澳洲设立三个集运中心
+默认采用集中转运、凭护照到集运中心领取
+集运安全、便捷、价更优！了解更多>" />
+    </LinearLayout>
+    </au.com.hbuy.aotong.view.OverScrollView>
+
+    <!--    <Button
+            android:stateListAnimator="@null"
+            android:id="@+id/bt_save"
+            android:textColor="@color/color_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/x20"
+            android:background="@drawable/bg_left_and_right_angle_button"
+            android:padding="@dimen/x10"
+            android:text="确认添加" />-->
+</LinearLayout>

@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_marginLeft="@dimen/x20"
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_gray" />
+        <RadioGroup
+            android:id="@+id/rg_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_back"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <RadioButton
+                android:id="@+id/rb_register"
+                style="@style/BottomTabStyle.Complete"
+                android:text="@string/new_username" />
+            <RadioButton
+                android:id="@+id/rb_login"
+                style="@style/BottomTabStyle.Complete"
+                android:text="@string/old_username" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <au.com.hbuy.aotong.view.NoScrollViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

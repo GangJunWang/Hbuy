@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        android:layout_alignParentTop="true"
+        style="@style/Page_RelativeLayout" >
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img"
+            />
+        <TextView
+            android:text="@string/select_receiver_address"
+            style="@style/Title_Text_Style" />
+        <TextView
+            android:text="@string/select_receiver_manage"
+            android:id="@+id/tv_manage"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_white"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <ListView
+        android:layout_below="@+id/title_tab"
+        android:layout_marginTop="@dimen/y1"
+        android:id="@+id/lv_address"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bt_next"
+        android:textColor="@color/color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_left_and_right_angle_button"
+        android:stateListAnimator="@null"
+        android:padding="@dimen/x10"
+        android:layout_margin="@dimen/x10"
+        android:text="@string/next" />
+</RelativeLayout>

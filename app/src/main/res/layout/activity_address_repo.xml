@@ -1,0 +1,179 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        style="@style/Page_RelativeLayout">
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/hbuy_repo_address" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x32"
+        android:background="@color/repo_hint_title_bg"
+        android:gravity="center"
+        android:text="转运包裹先寄到Hbuy中转仓,我们代您拆包验货哦!"
+        android:textColor="@color/repo_hint_title"
+        android:textSize="@dimen/x12"
+        android:textStyle="bold" />
+    <au.com.hbuy.aotong.view.OverScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_marginBottom="@dimen/x20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/x20"
+                android:paddingLeft="@dimen/x18"
+                android:paddingRight="@dimen/x18"
+                android:paddingTop="@dimen/x20">
+                <RelativeLayout style="@style/Address_repo_Layout">
+                    <TextView
+                        android:id="@+id/tv_name_hint"
+                        style="@style/Address_Repo_Layout_TextView"
+                        android:layout_alignParentLeft="true"
+                        android:paddingLeft="@dimen/x10"
+                        android:paddingRight="@dimen/x10"
+                        android:text="@string/consignee"
+                        android:textColor="#000"
+                        android:textSize="@dimen/x14" />
+
+                    <View
+                        android:id="@+id/view"
+                        style="@style/Address_Repo_Layout_View"
+                        android:layout_toRightOf="@+id/tv_name_hint" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        style="@style/Address_Repo_Layout_TextView_02"
+                        android:layout_toRightOf="@+id/view"
+                        android:textColor="#000"
+                        android:textSize="@dimen/x14" />
+                    <TextView
+                        android:id="@+id/tv_name_copy"
+                        style="@style/Address_Repo_Layout_TextView_cope"
+                        android:layout_alignParentRight="true"
+                        android:text="复制"
+                        android:textColor="@color/btn_pressed_color" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/Address_repo_Layout">
+
+                    <TextView
+                        android:id="@+id/tv_phone_hint"
+                        style="@style/Address_Repo_Layout_TextView"
+                        android:layout_alignParentLeft="true"
+                        android:paddingLeft="@dimen/x10"
+                        android:paddingRight="@dimen/x10"
+                        android:text="@string/phone"
+                        android:textColor="#000"
+                        android:textSize="@dimen/x14" />
+
+                    <View
+                        android:id="@+id/view_phone"
+                        style="@style/Address_Repo_Layout_View"
+                        android:layout_toRightOf="@+id/tv_phone_hint" />
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        style="@style/Address_Repo_Layout_TextView_02"
+                        android:layout_toRightOf="@+id/view_phone"
+                        android:textColor="#000"
+                        android:textSize="@dimen/x14" />
+                    <TextView
+                        android:id="@+id/tv_phone_copy"
+                        style="@style/Address_Repo_Layout_TextView_cope"
+                        android:layout_alignParentRight="true"
+                        android:text="复制"
+                        android:textColor="@color/btn_pressed_color" />
+                </RelativeLayout>
+                <RelativeLayout
+                    style="@style/Address_repo_Layout"
+                    android:layout_height="@dimen/x80">
+                    <TextView
+                        android:id="@+id/tv_address_hint"
+                        style="@style/Address_Repo_Layout_TextView"
+                        android:layout_alignParentLeft="true"
+                        android:paddingLeft="@dimen/x10"
+                        android:paddingRight="@dimen/x10"
+                        android:text="@string/repo_address_tow"
+                        android:textColor="#000"
+                        android:textSize="@dimen/x14" />
+                    <View
+                        android:id="@+id/view_address"
+                        android:layout_height="@dimen/x64"
+                        style="@style/Address_Repo_Layout_View"
+                        android:layout_toRightOf="@+id/tv_address_hint" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        style="@style/Address_Repo_Layout_TextView_02"
+                        android:layout_toRightOf="@+id/view_address"
+                        android:layout_toLeftOf="@+id/tv_address_copy"
+                        android:textColor="#000"
+                        android:layout_marginRight="@dimen/x10"
+                        android:textSize="@dimen/x14" />
+
+                    <TextView
+                        android:id="@+id/tv_address_copy"
+                        style="@style/Address_Repo_Layout_TextView_cope"
+                        android:layout_alignParentRight="true"
+                        android:text="复制"
+                        android:textColor="@color/btn_pressed_color" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/Address_repo_Layout">
+
+                    <TextView
+                        android:id="@+id/tv_zip_hint"
+                        style="@style/Address_Repo_Layout_TextView"
+                        android:layout_alignParentLeft="true"
+                        android:paddingLeft="@dimen/x10"
+                        android:paddingRight="@dimen/x10"
+                        android:text="@string/zip"
+                        android:textColor="#000"
+                        android:textSize="@dimen/x14" />
+
+                    <View
+                        android:id="@+id/view_zip"
+                        style="@style/Address_Repo_Layout_View"
+                        android:layout_toRightOf="@+id/tv_zip_hint" />
+
+                    <TextView
+                        android:id="@+id/tv_zip"
+                        style="@style/Address_Repo_Layout_TextView_02"
+                        android:layout_toRightOf="@+id/view_zip"
+                        android:textColor="#000"
+                        android:textSize="@dimen/x14" />
+
+                    <TextView
+                        android:id="@+id/tv_zip_copy"
+                        style="@style/Address_Repo_Layout_TextView_cope"
+                        android:layout_alignParentRight="true"
+                        android:text="复制"
+                        android:textColor="@color/btn_pressed_color" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/bt_copy"
+                    style="@style/Bottom_Button_Style"
+                    android:stateListAnimator="@null"
+                    android:text="@string/bt_copy_msg" />
+            </LinearLayout>
+            <include layout="@layout/issue_layout"/>
+        </LinearLayout>
+    </au.com.hbuy.aotong.view.OverScrollView>
+</LinearLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:background="@color/color_white">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_back"
+            android:src="@drawable/back_gray"
+            style="@style/Activity_Page_Back_Img" />
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/complete_data"
+            android:textColor="@color/default_color" />
+        <TextView
+            android:text="反馈问题"
+            android:textSize="@dimen/x14"
+            android:textColor="#000"
+            android:id="@+id/tv_feedback"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:paddingBottom="@dimen/x60"
+            android:background="@drawable/login_bg_top"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/civ_img"
+                android:src="@drawable/select_avator"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/y10"
+                android:paddingTop="@dimen/y10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:background="@drawable/add_pkg_edit_layout_angle_login"
+            android:layout_marginTop="@dimen/x90"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/x14"
+            android:layout_marginLeft="@dimen/x14"
+            android:paddingLeft="@dimen/x14"
+            android:paddingRight="@dimen/x14"
+            android:paddingTop="@dimen/x20"
+            android:orientation="vertical">
+            <TextView
+                android:text="*此姓名为您在Hbuy标识，请谨慎填写"
+                android:layout_width="match_parent"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/x13"
+                android:textColor="@color/red_color" />
+            <RelativeLayout style="@style/Address_Edit_Layout">
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/tv_select_code"
+                    style="@style/Complete_Data_Width"
+                    android:text="用户名" />
+                <View
+                    android:id="@+id/view_code1"
+                    style="@style/Address_Edit_Layout_View"
+                    android:layout_toRightOf="@+id/tv_select_code" />
+                <au.com.hbuy.aotong.view.ClearEditText
+                    android:id="@+id/tv_name"
+                    android:textSize="@dimen/x12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@null"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/view_code1"
+                    android:background="@null"
+                    android:hint="@string/complete_name_hint" />
+            </RelativeLayout>
+            <RelativeLayout style="@style/Address_Edit_Layout">
+                <TextView
+                    style="@style/Complete_Data_Width"
+                    android:id="@+id/tv_select_sex"
+                    android:text="性 别" />
+                <View
+                    android:id="@+id/view_code2"
+                    style="@style/Address_Edit_Layout_View"
+                    android:layout_toRightOf="@+id/tv_select_sex" />
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_selete_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/x10"
+                    android:drawableRight="@drawable/select_other"
+                    android:layout_toRightOf="@+id/view_code2"
+                    android:gravity="center"
+                    android:hint="请选择"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/x10" />
+            </RelativeLayout>
+            <RelativeLayout style="@style/Address_Edit_Layout">
+                <TextView
+                    android:id="@+id/tv_nation"
+                    style="@style/Complete_Data_Width"
+                    android:text="国家" />
+                <View
+                    android:id="@+id/view_code3"
+                    style="@style/Address_Edit_Layout_View"
+                    android:layout_toRightOf="@+id/tv_nation" />
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_select_nation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/x10"
+                    android:layout_toRightOf="@+id/view_code3"
+                    android:drawableRight="@drawable/select_other"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:hint="请选择"
+                    android:paddingRight="@dimen/x10" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/kf_layout" style="@style/Address_Edit_Layout" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_centerVertical="true"
+                    android:text="是否是老客户" />
+                <com.zcw.togglebutton.ToggleButton
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/toolbar_bottom"
+                    android:layout_width="59dp"
+                    toggle:tbOnColor="#76EE00"
+                    toggle:tbOffColor="#ddd"
+                    toggle:tbSpotColor="#ffffff"
+                    toggle:tbBorderWidth="2dp"
+                    android:layout_height="32dp" >
+                </com.zcw.togglebutton.ToggleButton>
+            </RelativeLayout>
+            <RelativeLayout style="@style/Address_Edit_Layout"
+                android:visibility="gone"
+                android:id="@+id/layout_kf" >
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/red_color"
+                    android:layout_height="@dimen/x29"
+                    android:text="客服" />
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_kf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x29"
+                    android:drawablePadding="@dimen/x10"
+                    android:drawableRight="@drawable/select_other"
+                    android:gravity="center"
+                    android:textColor="@color/red_color"
+                    android:hint="请选择"
+                    android:paddingRight="@dimen/x10" />
+            </RelativeLayout>
+            <Button
+                android:layout_marginRight="@dimen/x20"
+                android:layout_marginLeft="@dimen/x20"
+                style="@style/Bottom_Button_Weixin_Style"
+                android:id="@+id/bt_save"
+                android:background="@drawable/bg_left_and_right_angle_button_login"
+                android:stateListAnimator="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y40"
+                android:text="@string/start_ok" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

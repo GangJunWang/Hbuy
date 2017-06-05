@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="au.com.hbuy.aotong">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 极光推送 -->
+    <!-- Optional for location -->
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".MyAppliciation"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Main">
+
+        </activity>
+
+        <!-- bug收集工具 -->
+        <meta-data
+            android:name="BUG_HD_SDK_GENERAL_KEY"
+            android:value="ad53e8ea73f93bdc84d7f91ed7a5fc92" />
+
+        <!-- 友盟统计 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5881ca574ad15635f7000c9e" />
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- 极光推送 -->
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="d91f9fcf9b23344c6fe0846b " />
+        <!-- </>值来自开发者平台取得的AppKey -->
+        <!-- Required SDK核心功能 -->
+
+        <!-- &lt;!&ndash;适配7.0拍照&ndash;&gt;
+         <provider
+             android:name="android.support.v4.content.FileProvider"
+             android:authorities="com.jph.takephoto.fileprovider"
+             android:exported="false"
+             android:grantUriPermissions="true">
+             <meta-data
+                 android:name="android.support.FILE_PROVIDER_PATHS"
+                 android:resource="@xml/file_path" />
+         </provider>-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+        <!--<service
+            android:name="io.rong.push.core.PushRegistrationService"
+            android:exported="false" />
+        &lt;!&ndash; 处理 push 消息相关的服务 &ndash;&gt;
+        <service
+            android:name="io.rong.push.core.MessageHandleService"
+            android:exported="true" />
+        &lt;!&ndash; push服务 &ndash;&gt;
+        <service
+            android:name="io.rong.push.PushService"
+            android:exported="false"
+            android:process="io.rong.push"> &lt;!&ndash; push进程，可以改名 &ndash;&gt;
+        </service>
+        &lt;!&ndash; push 相关事件接收器 &ndash;&gt;
+        <receiver
+            android:name="io.rong.push.PushReceiver"
+            android:process="io.rong.push">
+
+            &lt;!&ndash; 此处进程可以改名，名称需要和PushService所在进程统一 &ndash;&gt;
+            &lt;!&ndash; 心跳事件 &ndash;&gt;
+            <intent-filter>
+                <action android:name="io.rong.push.intent.action.HEART_BEAT" />
+            </intent-filter>
+            &lt;!&ndash; 网络变动事件 &ndash;&gt;
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            &lt;!&ndash; 部分用户事件 &ndash;&gt;
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>-->
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!-- Required  显示通知栏 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".service.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.RYNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".AddPkgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FeekBackActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".HistoryPkgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddressEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UnwrapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutNetTestActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".AboutHbuyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AuthUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReceiverAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WaitPlaceOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PayOrderDetailsActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".BuyNoticeActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AddressRepoActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserOrderGuideActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".WeixinFindPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WaitPayNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaymentOtherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddressDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DrawImgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BuyListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".HandingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BaseFragmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PreSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddBuyActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".SecurityCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PayOrderBuyDetailsActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".PersonalDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FaqActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".CompleteDataActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ModifyPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MessageManagerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserGuideActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SelectNationAndCodeActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".EmailBoundActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PhoneBoundActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ImagePagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FindPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GetAddressRepoActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".PhoneRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PhoneRegisterNextActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EmailRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"></activity>
+        <!--    <activity
+                android:name=".PaymentOtherImgActivity"
+                android:screenOrientation="portrait">
+            </activity>-->
+        <activity
+            android:name=".WorkOrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PkgDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaymentActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".CompleteActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".TransferActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".SelectAddressActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".PaySucceedActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".WaitPaymentActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".WaitPayListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AddWaitPayActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <service
+            android:name=".service.DownloadService"
+            android:exported="true" />
+
+        <activity
+            android:name=".ConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="au.com.hbuy.aotong"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MyCouponActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".FindPwdTowActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".BuyPageDetailsActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".FindPwdInputActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".UserdealActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ParitiesManagerActivity"
+            android:screenOrientation="portrait" />
+    </application>
+</manifest>

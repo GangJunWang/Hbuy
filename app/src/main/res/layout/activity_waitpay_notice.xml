@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/Title_Text_Style"
+            android:text="@string/waitpay_notice" />
+        <ImageView
+            android:id="@+id/iv_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x10"
+            android:src="@drawable/online_service_chat" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_tab"
+        android:background="@color/repo_hint_title_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/x10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:text="请向该支付宝发送代付申请"
+            android:textColor="@color/repo_hint_title" />
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="代付规则"
+            android:textColor="@color/button_color" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hint"
+        android:layout_marginLeft="@dimen/y10"
+        android:layout_marginRight="@dimen/y10"
+        android:layout_marginTop="@dimen/y15"
+        android:background="@drawable/bg_left_and_right_angle_layout"
+        android:orientation="vertical"
+        android:padding="@dimen/x10">
+        <RelativeLayout
+            android:background="@drawable/bg_left_and_right_angle_edit"
+            android:id="@+id/zhifb_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hint"
+            android:orientation="horizontal"
+            android:padding="@dimen/x10">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10"
+                android:text="@string/zfb" />
+            <TextView
+                android:id="@+id/tv_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="复制"
+                android:textColor="@color/button_color" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_hint2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zhifb_hint"
+            android:padding="@dimen/x10"
+            android:text="@string/buy_notice_hint02" />
+        <au.com.hbuy.aotong.view.ClearEditText
+            android:id="@+id/et_mk"
+            android:background="@drawable/bg_left_and_right_angle_edit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:gravity="top|left"
+            android:hint="其他要求"
+            android:padding="@dimen/x10"
+            android:textCursorDrawable="@null" />
+    </LinearLayout>
+
+    <include layout="@layout/common_bottom_bt" />
+</RelativeLayout>

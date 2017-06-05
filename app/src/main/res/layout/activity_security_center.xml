@@ -1,0 +1,188 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_tab"
+        style="@style/Page_RelativeLayout"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/y10">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/Activity_Page_Back_Img" />
+
+        <TextView
+            style="@style/Title_Text_Style"
+            android:text="@string/security_center" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/modify_pwd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_tab"
+        android:background="@color/color_white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x10">
+
+        <RelativeLayout style="@style/Security_Center_Page_Layout">
+
+            <ImageView
+                android:id="@+id/iv_hint_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/x10"
+                android:src="@drawable/secu_pwd" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_hint_01"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Security_Center_Page_Layout_Hint"
+                    android:text="修改密码" />
+
+                <TextView
+                    style="@style/Security_Center_Page_Layout_Text"
+                    android:text="建议定期修改密码确保账号安全" />
+            </LinearLayout>
+
+            <TextView
+                android:drawableRight="@drawable/select_other"
+                android:id="@+id/tv_mofity_pwd"
+                style="@style/Security_Center_Page_Layout_Text"
+                android:text="去修改" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="#e2e2e2" />
+
+        <RelativeLayout style="@style/Security_Center_Page_Layout"
+            android:id="@+id/modify_phone_layout">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/x10"
+                android:id="@+id/iv_hint_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/secu_phone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_hint_02"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Security_Center_Page_Layout_Hint"
+                    android:text="手机号" />
+
+                <TextView
+                    android:id="@+id/tv_phone_hint"
+                    style="@style/Security_Center_Page_Layout_Text"
+                    android:text="已绑定，如需更换请点击修改" />
+            </LinearLayout>
+
+            <TextView
+                android:drawableRight="@drawable/select_other"
+                android:id="@+id/bt_phone"
+                style="@style/Security_Center_Page_Layout_Text"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="#e2e2e2" />
+        <RelativeLayout style="@style/Security_Center_Page_Layout" android:id="@+id/modify_weixin_layout">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/x10"
+                android:id="@+id/iv_hint_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/secu_weixin" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_hint_03"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/Security_Center_Page_Layout_Hint"
+                    android:text="微信" />
+
+                <TextView
+                    android:id="@+id/tv_weixin_hint"
+                    style="@style/Security_Center_Page_Layout_Text"
+                    android:text="已绑定，如需更换请点击修改" />
+            </LinearLayout>
+
+            <TextView
+                android:drawableRight="@drawable/select_other"
+                android:id="@+id/bt_weixin"
+                style="@style/Security_Center_Page_Layout_Text"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="#e2e2e2" />
+        <RelativeLayout
+            style="@style/Security_Center_Page_Layout"
+            android:id="@+id/modify_email_layout"
+            >
+            <ImageView
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/x10"
+                android:id="@+id/iv_hint_04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/secu_email" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_hint_04"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/Security_Center_Page_Layout_Hint"
+                    android:text="邮箱" />
+                <TextView
+                    android:id="@+id/tv_email_hint"
+                    style="@style/Security_Center_Page_Layout_Text"
+                    android:text="已绑定，如需更换请点击修改" />
+            </LinearLayout>
+            <TextView
+                android:drawableRight="@drawable/select_other"
+                android:id="@+id/bt_email"
+                android:layout_alignParentRight="true"
+                style="@style/Security_Center_Page_Layout_Text" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/x10"
+        android:background="@drawable/bg_left_and_right_angle_button_exit"
+        android:stateListAnimator="@null"
+        android:text="@string/logout"
+        android:textColor="@drawable/btn_exit_selector"
+        android:textSize="@dimen/x18" />
+</RelativeLayout>

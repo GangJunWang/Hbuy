@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+    <au.com.hbuy.aotong.view.OverScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:paddingBottom="@dimen/x60"
+                android:background="@drawable/login_bg_top"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <au.com.hbuy.aotong.view.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/civ_img"
+                    android:layout_width="@dimen/x60"
+                    android:layout_height="@dimen/x60"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/y10"
+                    android:layout_marginTop="@dimen/y10"
+                    android:clickable="true"
+                    android:src="@drawable/hbuy"
+                    app:border_color="#FFffffff"
+                    app:border_width="1dp" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/layout_bottom"
+                android:background="@drawable/add_pkg_edit_layout_angle_login"
+                android:layout_marginTop="@dimen/x90"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/x14"
+                android:paddingLeft="@dimen/x14"
+                android:paddingRight="@dimen/x14"
+                android:layout_marginLeft="@dimen/x14"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_name_hint"
+                    android:paddingTop="@dimen/x10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666"
+                    android:layout_marginBottom="@dimen/y4"
+                    android:textSize="@dimen/x14" />
+                    <RelativeLayout style="@style/Address_Edit_Layout">
+                        <TextView
+                            android:id="@+id/tv_select_code"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/x80"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:drawableRight="@drawable/back_gray_bottom"
+                            android:text="+86" />
+                        <View
+                            android:id="@+id/view_code"
+                            style="@style/Address_Edit_Layout_View"
+                            android:layout_toRightOf="@+id/tv_select_code" />
+                        <au.com.hbuy.aotong.view.ClearEditText
+                            android:id="@+id/et_phone"
+                            android:textCursorDrawable="@null"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/view_code"
+                            android:textSize="@dimen/x12"
+                            android:inputType="number"
+                            android:background="@null"
+                            android:hint="@string/phone_edit" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        style="@style/Address_Edit_Layout">
+                        <TextView
+                            android:id="@+id/iv_name"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/x80"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:text="验证码" />
+                        <View
+                            android:id="@+id/view_name"
+                            android:layout_toRightOf="@+id/iv_name"
+                            style="@style/Address_Edit_Layout_View" />
+                        <au.com.hbuy.aotong.view.ClearEditText
+                            android:id="@+id/et_code"
+                            android:textCursorDrawable="@null"
+                            android:background="@null"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:textSize="@dimen/x12"
+                            android:inputType="number"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/view_name"
+                            android:hint="输入验证码" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/bt_get_code"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:text="获取验证码"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="@dimen/x10"
+                            android:textColor="@color/btn_pressed_color"
+                            android:layout_width="wrap_content" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        style="@style/Address_Edit_Layout">
+                        <TextView
+                            android:id="@+id/iv_pwd1"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="@dimen/x80"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:text="密 码" />
+                        <View
+                            android:id="@+id/view_pwd1"
+                            android:layout_toRightOf="@+id/iv_pwd1"
+                            style="@style/Address_Edit_Layout_View" />
+                        <au.com.hbuy.aotong.view.ClearEditText
+                            android:id="@+id/pwd_edit"
+                            android:hint="@string/bound_hint_pwd"
+                            android:textCursorDrawable="@null"
+                            android:password="true"
+                            android:textSize="@dimen/x12"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:layout_toRightOf="@+id/view_pwd1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/Address_Edit_Layout">
+                        <TextView
+                            android:id="@+id/iv_pwd"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center"
+                            android:layout_width="@dimen/x80"
+                            android:layout_centerVertical="true"
+                            android:text="重复密码" />
+                        <View
+                            android:id="@+id/view_pwd"
+                            android:layout_toRightOf="@+id/iv_pwd"
+                            style="@style/Address_Edit_Layout_View" />
+                        <au.com.hbuy.aotong.view.ClearEditText
+                            android:id="@+id/pwd_edit_verify"
+                            android:hint="@string/repetition_pwd_tow"
+                            android:textCursorDrawable="@null"
+                            android:password="true"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:textSize="@dimen/x12"
+                            android:layout_toRightOf="@+id/view_pwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red_color"
+                    android:gravity="right"
+                    android:layout_marginBottom="@dimen/y4"
+                    android:layout_marginTop="@dimen/y4"
+                    android:text="*此姓名为您在Hbuy标识，请谨慎填写"
+                    android:textSize="@dimen/x13" />
+                    <RelativeLayout style="@style/Address_Edit_Layout">
+                        <TextView
+                            android:maxLines="1"
+                            android:gravity="center"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_nicheng"
+                            android:layout_width="@dimen/x80"
+                            android:text="真是姓名" />
+                        <View
+                            android:id="@+id/view_code1"
+                            style="@style/Address_Edit_Layout_View"
+                            android:layout_toRightOf="@+id/tv_nicheng" />
+                        <au.com.hbuy.aotong.view.ClearEditText
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/x12"
+                            android:textCursorDrawable="@null"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/view_code1"
+                            android:background="@null"
+                            android:hint="@string/complete_name_hint" />
+                    </RelativeLayout>
+                    <Button
+                        style="@style/Bottom_Button_Style"
+                        android:layout_marginTop="@dimen/x20"
+                        android:background="@drawable/bg_left_and_right_angle_button_login"
+                        android:id="@+id/register_agree_button"
+                        android:stateListAnimator="@null"
+                        android:text="注册新账号" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:padding="@dimen/x10"
+                        android:textSize="@dimen/x12"
+                        android:text="点击注册新账号即表示您同意并遵守" />
+                    <TextView
+                        android:text="《华人Hbuy用户注册协议》"
+                        android:textColor="@color/phone_register_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:id="@+id/tv_user_deal"
+                        android:gravity="center"
+                        android:padding="@dimen/x10"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </au.com.hbuy.aotong.view.OverScrollView>
+</LinearLayout>
