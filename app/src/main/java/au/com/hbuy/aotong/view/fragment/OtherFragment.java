@@ -55,6 +55,7 @@ public class OtherFragment extends Fragment {
     }
 
     public OtherFragment() {
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)

@@ -4,22 +4,25 @@
     android:layout_height="match_parent"
     android:background="@color/color_white"
     android:orientation="vertical">
+
     <TextView
-        android:text="包裹到达未及时签收有可能会被海关退回哦!"
-        android:gravity="center"
-        android:layout_marginTop="@dimen/x16"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x16"
+        android:gravity="center"
+        android:text="包裹到达未及时签收有可能会被海关退回哦!"
         android:textColor="#000"
         android:textSize="@dimen/x14" />
+
     <RelativeLayout
-        android:layout_marginTop="@dimen/x16"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x40"
         android:layout_marginLeft="@dimen/x24"
         android:layout_marginRight="@dimen/x24"
+        android:layout_marginTop="@dimen/x16"
         android:background="@drawable/add_pkg_angle_layout"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="@dimen/x40"
@@ -31,53 +34,57 @@
             android:text="关于包裹那些事... ..."
             android:textColor="@color/color_white"
             android:textSize="@dimen/x14" />
+
         <TextView
             android:id="@+id/tv_look"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/x40"
             android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x12"
+            android:drawablePadding="@dimen/x4"
+            android:gravity="center"
             android:paddingBottom="@dimen/x2"
             android:paddingLeft="@dimen/x6"
             android:paddingRight="@dimen/x6"
-            android:drawablePadding="@dimen/x4"
             android:paddingTop="@dimen/x2"
             android:text="查看更多 >"
-            android:layout_marginRight="@dimen/x12"
-            android:gravity="center"
             android:textColor="@color/color_white"
             android:textSize="@dimen/x12"
             android:textStyle="bold" />
     </RelativeLayout>
+
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/x10"
         android:layout_marginLeft="@dimen/x22"
         android:layout_marginRight="@dimen/x22"
-        android:paddingLeft="@dimen/x20"
-        android:paddingTop="@dimen/x12"
-        android:paddingBottom="@dimen/x28"
-        android:paddingRight="@dimen/x20"
+        android:background="@drawable/bg_left_and_right_angle_layout_repo_layout"
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_left_and_right_angle_layout_repo_layout">
+        android:paddingBottom="@dimen/x28"
+        android:paddingLeft="@dimen/x20"
+        android:paddingRight="@dimen/x20"
+        android:paddingTop="@dimen/x12">
+
         <TextView
-            android:drawableLeft="@drawable/workorder_point"
-            android:drawablePadding="@dimen/x4"
             android:id="@+id/tv_hint01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/x20"
+            android:drawableLeft="@drawable/workorder_point"
+            android:drawablePadding="@dimen/x4"
             android:lineSpacingExtra="@dimen/x10"
             android:textColor="#666"
             android:textSize="@dimen/x14" />
+
         <TextView
-            android:drawableLeft="@drawable/workorder_point"
-            android:drawablePadding="@dimen/x4"
             android:id="@+id/tv_hint02"
-            android:lineSpacingExtra="@dimen/x6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/x24"
+            android:drawableLeft="@drawable/workorder_point"
+            android:drawablePadding="@dimen/x4"
+            android:lineSpacingExtra="@dimen/x6"
             android:textColor="#666"
             android:textSize="@dimen/x14" />
     </LinearLayout>

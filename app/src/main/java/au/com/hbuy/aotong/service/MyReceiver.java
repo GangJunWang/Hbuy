@@ -55,6 +55,7 @@ import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
  * Created by HFS on 2016/7/30.
  */
 public class MyReceiver extends BroadcastReceiver {
+
     private static final String TAG = "MyReceiver";
     @Override
     public void onReceive(final Context context, Intent intent) {

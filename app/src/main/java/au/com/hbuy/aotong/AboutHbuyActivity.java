@@ -46,6 +46,7 @@ public class AboutHbuyActivity extends BaseActivity {
     TextView tvUsNewVersion;
     @Bind(R.id.tv_us_hbuy)
     TextView tvUsHbuy;
+
     @Bind(R.id.tv_feedback)
     TextView tvFeedback;
     @Bind(R.id.tv_net)

@@ -40,6 +40,7 @@ public class ApiClient {
     }
 
     public ApiClient(Context context) {
+
         cookieJar = new PersistentCookieJar(new SetCookieCache(), new SharedPrefsCookiePersistor(context));
         KLog.d(cookieJar.toString());
 
@@ -127,6 +128,7 @@ public class ApiClient {
      * @param callback 响应回调
      */
     public static void postForm(String url, HashMap<String, String> params, Callback callback) {
+
         KLog.d(url);
         KLog.d(params);
         PostFormBuilder builder = OkHttpUtils.post()
